@@ -56,99 +56,110 @@
                 <p>Sprawdź nasze zabiegi i umów się na konsultacje</p>
             </div>
 
-            <div class="slide-section">
-                <ul class="slide-list">
-                    <li class="slide-list__item" tabindex="0"
-                        style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
-                        <div class="slide-list__content">
-                            <h3 class="slide-list__title">Volumetria</h3>
-                            <div class="slide-list__description">
-                                <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części twarzy:
-                                    okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
-                                <a href="" class="button">Szczegóły zabiegu</a>
+            <div class="slide-section__wrapper">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/frame-2.png" class="slide-list__artefact"
+                     role="presentation" alt="">
+                <div class="slide-section">
+                    <ul class="slide-list">
+                        <li class="slide-list__item" tabindex="0"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
+                            <div class="slide-list__content">
+                                <h3 class="slide-list__title">Volumetria</h3>
+                                <div class="slide-list__description">
+                                    <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części
+                                        twarzy:
+                                        okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
+                                    <a href="" class="button">Szczegóły zabiegu</a>
+                                </div>
+
                             </div>
+                        </li>
 
-                        </div>
-                    </li>
+                        <li class="slide-list__item" tabindex="0"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
+                            <div class="slide-list__content">
+                                <h3 class="slide-list__title">Volumetria</h3>
+                                <div class="slide-list__description">
+                                    <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części
+                                        twarzy:
+                                        okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
+                                    <a href="" class="button">Szczegóły zabiegu</a>
+                                </div>
 
-                    <li class="slide-list__item" tabindex="0"
-                        style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
-                        <div class="slide-list__content">
-                            <h3 class="slide-list__title">Volumetria</h3>
-                            <div class="slide-list__description">
-                                <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części twarzy:
-                                    okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
-                                <a href="" class="button">Szczegóły zabiegu</a>
                             </div>
+                        </li>
 
-                        </div>
-                    </li>
+                        <li class="slide-list__item" tabindex="0"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
+                            <div class="slide-list__content">
+                                <h3 class="slide-list__title">Volumetria</h3>
+                                <div class="slide-list__description">
+                                    <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części
+                                        twarzy:
+                                        okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
+                                    <a href="" class="button">Szczegóły zabiegu</a>
+                                </div>
 
-                    <li class="slide-list__item" tabindex="0"
-                        style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
-                        <div class="slide-list__content">
-                            <h3 class="slide-list__title">Volumetria</h3>
-                            <div class="slide-list__description">
-                                <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części twarzy:
-                                    okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
-                                <a href="" class="button">Szczegóły zabiegu</a>
                             </div>
+                        </li>
 
-                        </div>
-                    </li>
+                        <li class="slide-list__item" tabindex="0"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
+                            <div class="slide-list__content">
+                                <h3 class="slide-list__title">Volumetria</h3>
+                                <div class="slide-list__description">
+                                    <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części
+                                        twarzy:
+                                        okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
+                                    <a href="" class="button">Szczegóły zabiegu</a>
+                                </div>
 
-                    <li class="slide-list__item" tabindex="0"
-                        style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
-                        <div class="slide-list__content">
-                            <h3 class="slide-list__title">Volumetria</h3>
-                            <div class="slide-list__description">
-                                <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części twarzy:
-                                    okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
-                                <a href="" class="button">Szczegóły zabiegu</a>
                             </div>
+                        </li>
 
-                        </div>
-                    </li>
+                        <li class="slide-list__item" tabindex="0"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
+                            <div class="slide-list__content">
+                                <h3 class="slide-list__title">Volumetria</h3>
+                                <div class="slide-list__description">
+                                    <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części
+                                        twarzy:
+                                        okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
+                                    <a href="" class="button">Szczegóły zabiegu</a>
+                                </div>
 
-                    <li class="slide-list__item" tabindex="0"
-                        style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
-                        <div class="slide-list__content">
-                            <h3 class="slide-list__title">Volumetria</h3>
-                            <div class="slide-list__description">
-                                <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części twarzy:
-                                    okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
-                                <a href="" class="button">Szczegóły zabiegu</a>
                             </div>
+                        </li>
 
-                        </div>
-                    </li>
+                        <li class="slide-list__item" tabindex="0"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
+                            <div class="slide-list__content">
+                                <h3 class="slide-list__title">Volumetria</h3>
+                                <div class="slide-list__description">
+                                    <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części
+                                        twarzy:
+                                        okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
+                                    <a href="" class="button">Szczegóły zabiegu</a>
+                                </div>
 
-                    <li class="slide-list__item" tabindex="0"
-                        style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
-                        <div class="slide-list__content">
-                            <h3 class="slide-list__title">Volumetria</h3>
-                            <div class="slide-list__description">
-                                <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części twarzy:
-                                    okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
-                                <a href="" class="button">Szczegóły zabiegu</a>
                             </div>
+                        </li>
 
-                        </div>
-                    </li>
+                        <li class="slide-list__item" tabindex="0"
+                            style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
+                            <div class="slide-list__content">
+                                <h3 class="slide-list__title">Volumetria</h3>
+                                <div class="slide-list__description">
+                                    <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części
+                                        twarzy:
+                                        okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
+                                    <a href="" class="button">Szczegóły zabiegu</a>
+                                </div>
 
-                    <li class="slide-list__item" tabindex="0"
-                        style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/zabieg.png)">
-                        <div class="slide-list__content">
-                            <h3 class="slide-list__title">Volumetria</h3>
-                            <div class="slide-list__description">
-                                <p>Terapię poleca się osobom ze zmarszczkami mimicznymi zwłaszcza górnej części twarzy:
-                                    okolica czoła zmarszczki poprzeczne i podłużne oraz oczu tzw. kurze łapki</p>
-                                <a href="" class="button">Szczegóły zabiegu</a>
                             </div>
-
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -196,119 +207,93 @@
 
     </section>
 
-    <section class="section">
-        <div class="section__content">
-            <h2>Specjalizacje kliniki</h2>
-            <p>Sprawdź nasze zabiegi i umów się na konsultacje</p>
+    <section class="section spec">
+        <div class="section__container">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/spec-bg.png" alt="" class="spec__artefact">
+            <div class="section__content">
+                <h2>Specjalizacje kliniki</h2>
+                <p>Sprawdź nasze zabiegi i umów się na konsultacje</p>
+            </div>
+
+            <div class="slide-section">
+                <ul class="spec-list">
+                    <li class="spec-list__item">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/spec.png" class="spec-list__image"
+                             alt="">
+                        <div class="spec-list__content">
+                            <h3 class="spec-list__title">Twarz</h3>
+                            <p class="spec-list__description">Opracowaliśmy swoją własną metodę łączącą kuracje z
+                                zastosowaniem botoksu, kwasu hialuronowego oraz nici liftingujących</p>
+                            <a href="" class="button">Poznaj zabiegi</a>
+                        </div>
+                    </li>
+
+                    <li class="spec-list__item">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/spec.png" class="spec-list__image"
+                             alt="">
+                        <div class="spec-list__content">
+                            <h3 class="spec-list__title">Twarz</h3>
+                            <p class="spec-list__description">Opracowaliśmy swoją własną metodę łączącą kuracje z
+                                zastosowaniem botoksu, kwasu hialuronowego oraz nici liftingujących</p>
+                            <a href="" class="button">Poznaj zabiegi</a>
+                        </div>
+                    </li>
+
+                    <li class="spec-list__item">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/spec.png" class="spec-list__image"
+                             alt="">
+                        <div class="spec-list__content">
+                            <h3 class="spec-list__title">Twarz</h3>
+                            <p class="spec-list__description">Opracowaliśmy swoją własną metodę łączącą kuracje z
+                                zastosowaniem botoksu, kwasu hialuronowego oraz nici liftingujących</p>
+                            <a href="" class="button">Poznaj zabiegi</a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
         </div>
-
-        <div class="slide-section">
-            <ul class="spec-list">
-                <li class="spec-list__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/spec.png" class="spec-list__image"
-                         alt="">
-                    <div class="spec-list__content">
-                        <h3 class="spec-list__title">Twarz</h3>
-                        <p class="spec-list__description">Opracowaliśmy swoją własną metodę łączącą kuracje z
-                            zastosowaniem botoksu, kwasu hialuronowego oraz nici liftingujących</p>
-                        <a href="" class="button">Poznaj zabiegi</a>
-                    </div>
-                </li>
-
-                <li class="spec-list__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/spec.png" class="spec-list__image"
-                         alt="">
-                    <div class="spec-list__content">
-                        <h3 class="spec-list__title">Twarz</h3>
-                        <p class="spec-list__description">Opracowaliśmy swoją własną metodę łączącą kuracje z
-                            zastosowaniem botoksu, kwasu hialuronowego oraz nici liftingujących</p>
-                        <a href="" class="button">Poznaj zabiegi</a>
-                    </div>
-                </li>
-
-                <li class="spec-list__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/spec.png" class="spec-list__image"
-                         alt="">
-                    <div class="spec-list__content">
-                        <h3 class="spec-list__title">Twarz</h3>
-                        <p class="spec-list__description">Opracowaliśmy swoją własną metodę łączącą kuracje z
-                            zastosowaniem botoksu, kwasu hialuronowego oraz nici liftingujących</p>
-                        <a href="" class="button">Poznaj zabiegi</a>
-                    </div>
-                </li>
-
-                <li class="spec-list__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/spec.png" class="spec-list__image"
-                         alt="">
-                    <div class="spec-list__content">
-                        <h3 class="spec-list__title">Twarz</h3>
-                        <p class="spec-list__description">Opracowaliśmy swoją własną metodę łączącą kuracje z
-                            zastosowaniem botoksu, kwasu hialuronowego oraz nici liftingujących</p>
-                        <a href="" class="button">Poznaj zabiegi</a>
-                    </div>
-                </li>
-
-                <li class="spec-list__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/spec.png" class="spec-list__image"
-                         alt="">
-                    <div class="spec-list__content">
-                        <h3 class="spec-list__title">Twarz</h3>
-                        <p class="spec-list__description">Opracowaliśmy swoją własną metodę łączącą kuracje z
-                            zastosowaniem botoksu, kwasu hialuronowego oraz nici liftingujących</p>
-                        <a href="" class="button">Poznaj zabiegi</a>
-                    </div>
-                </li>
-
-                <li class="spec-list__item">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/spec.png" class="spec-list__image"
-                         alt="">
-                    <div class="spec-list__content">
-                        <h3 class="spec-list__title">Twarz</h3>
-                        <p class="spec-list__description">Opracowaliśmy swoją własną metodę łączącą kuracje z
-                            zastosowaniem botoksu, kwasu hialuronowego oraz nici liftingujących</p>
-                        <a href="" class="button">Poznaj zabiegi</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-
     </section>
 
-    <section class="section section--gray">
-        <div class="section__image-wrapper section__image-wrapper--minus-top">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/training.png" class="section__image" alt="">
+    <section class="section section--gray section-trainings">
+        <div class="section__container section__container--flex">
+            <div class="section__image-wrapper section__image-wrapper--minus-top">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/training.png" class="section__image"
+                     alt="">
 
+            </div>
+            <div class="section__content">
+                <h2>Szkolenia dla lekarzy</h2>
+                <p>Rozwijanie brand'u Kliniki Ziemlewski przełożyło się na stworzenie osobistej marki dra Krzysztofa
+                    Ziemlewskiego, a jednocześnie centrum szkoleniowego pod szyldem Tulip Medical Group. To miejsce
+                    stworzone przez lekarzy, dla lekarzy.</p>
+                <p>Już w krótce pojawi się lista planowanych szkoleń. Zostaw nam swój kontakt, damy Ci znać o kolejnym
+                    szkoleniu.</p>
+                <a href="" class="button button--secondary">Sprawdź aktualną listę szkoleń</a>
+            </div>
         </div>
-        <div class="section__content">
-            <h2>Szkolenia dla lekarzy</h2>
-            <p>Rozwijanie brand'u Kliniki Ziemlewski przełożyło się na stworzenie osobistej marki dra Krzysztofa
-                Ziemlewskiego, a jednocześnie centrum szkoleniowego pod szyldem Tulip Medical Group. To miejsce
-                stworzone przez lekarzy, dla lekarzy.</p>
-            <p>Już w krótce pojawi się lista planowanych szkoleń. Zostaw nam swój kontakt, damy Ci znać o kolejnym
-                szkoleniu.</p>
-            <a href="" class="button button--secondary">Sprawdź aktualną listę szkoleń</a>
-        </div>
-
     </section>
 
-    <section class="section">
-        <div class="section__image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/certs.png" class="section__image" alt="">
+    <section class="section certs">
+        <div class="section__container section__container--flex">
+            <div class="section__image-wrapper">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/certs.png" class="section__image" alt="">
+            </div>
 
-        </div>
-        <div class="section__content">
-            <h2>Mówią, że znamy się na swoim fachu</h2>
-            <p>Rozwijanie brand'u Kliniki Ziemlewski przełożyło się na stworzenie osobistej marki dra Krzysztofa
-                Ziemlewskiego, a jednocześnie centrum szkoleniowego pod szyldem Tulip Medical Group. To miejsce
-                stworzone przez lekarzy, dla lekarzy.</p>
-            <p>Już w krótce pojawi się lista planowanych szkoleń. Zostaw nam swój kontakt, damy Ci znać o kolejnym
-                szkoleniu.</p>
+            <div class="section__content">
+                <h2>Mówią, że znamy się na swoim fachu</h2>
+                <p>Rozwijanie brand'u Kliniki Ziemlewski przełożyło się na stworzenie osobistej marki dra Krzysztofa
+                    Ziemlewskiego, a jednocześnie centrum szkoleniowego pod szyldem Tulip Medical Group. To miejsce
+                    stworzone przez lekarzy, dla lekarzy.</p>
+                <p>Już w krótce pojawi się lista planowanych szkoleń. Zostaw nam swój kontakt, damy Ci znać o kolejnym
+                    szkoleniu.</p>
+            </div>
         </div>
     </section>
 
 
-    <section class="section section--gray">
-        <div class="section__content">
+    <section class="section section--gray most">
+        <div class="section__container">
             <h2 class="section__title section__title--center">Najczęstsze problemy naszych Pacjentek</h2>
 
             <ul class="most-list">
@@ -337,8 +322,10 @@
                 </li>
 
             </ul>
-            <p>To nie to? Zobacz naszą pełną ofertę:</p>
-            <a href="" class="button button--secondary">zobacz naszą pełną ofertę</a>
+            <div class="most__footer">
+                <p>To nie to? Zobacz naszą pełną ofertę:</p>
+                <a href="" class="button button--secondary">zobacz naszą pełną ofertę</a>
+            </div>
         </div>
 
     </section>
@@ -351,10 +338,16 @@
         </div>
     </section>
 
-    <section class="section section--primary">
-        <h2>Umów się na wizytę w Twoim mieście</h2>
-        <p>Lorem ipsum dolor sit amet</p>
-        <a href="" class="button button--accent">Umów konsultacje</a>
+    <section class="section section--primary cta">
+        <div class="section__container">
+            <div>
+                <h2>Umów się na wizytę w Twoim mieście</h2>
+                <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div>
+                <a href="" class="button button--accent">Umów konsultacje</a>
+            </div>
+        </div>
     </section>
 
     <div class="entry-content">

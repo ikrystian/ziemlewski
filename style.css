@@ -38,10 +38,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	box-sizing: border-box;
 }
 
-*:focus {
-	border: 1px solid red;
-}
-
 html {
 	font-size: 62.5%;
 }
@@ -129,9 +125,14 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
+	.section__container--reverse {
+		flex-direction: row-reverse;
+	}
+}
+
+@media only screen and (min-width: 768px) {
 	.section__container--flex {
 		display: flex;
-		flex-direction: row-reverse;
 	}
 }
 
@@ -144,6 +145,7 @@ img {
 @media only screen and (min-width: 1024px) {
 	.section__container--flex .section__image-wrapper {
 		flex: 4;
+		margin-bottom: 0;
 	}
 }
 
@@ -179,6 +181,12 @@ img {
 	padding-left: 0 !important;
 }
 
+@media only screen and (min-width: 1024px) {
+	.section--primary h2 {
+		font-size: 3.9rem !important;
+	}
+}
+
 .section--primary h2::before {
 	display: none !important;
 }
@@ -189,6 +197,7 @@ img {
 
 .section--dark {
 	background: #070707 url("./images/section-mosaic.webp") center no-repeat;
+	background-size: cover;
 	color: #fff;
 }
 
@@ -288,6 +297,12 @@ img {
 	width: 100%;
 	text-align: center;
 	letter-spacing: 1px;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.section .button:hover, .section .button:focus {
+	background-color: #fff;
+	color: #9a1830;
 }
 
 .section .button--secondary {
@@ -301,6 +316,11 @@ img {
 	background-color: #fff;
 	border-color: #fff;
 	font-weight: 500;
+}
+
+.section .button--accent:hover, .section .button--accent:focus {
+	color: #fff;
+	background-color: #9a1830;
 }
 
 .section__image-wrapper {
@@ -400,9 +420,13 @@ img {
 
 .slide-section {
 	max-width: 100%;
-	overflow-x: scroll;
+	overflow-x: auto;
 	padding-bottom: 5.5rem;
 	margin-bottom: 9rem;
+}
+
+.slide-section__wrapper {
+	position: relative;
 }
 
 .slide-section::-webkit-scrollbar {
@@ -421,6 +445,13 @@ img {
 .slide-list {
 	display: flex;
 	list-style: none;
+}
+
+.slide-list__artefact {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translateX(-80%);
 }
 
 .slide-list__title {
@@ -544,6 +575,13 @@ img {
 	flex-direction: column;
 }
 
+@media only screen and (min-width: 768px) {
+	.spec-list__item {
+		min-width: 396px;
+		width: 396px;
+	}
+}
+
 .spec-list__item:not(:last-of-type) {
 	margin-right: 2.1rem;
 }
@@ -612,9 +650,29 @@ img {
 }
 
 .site-footer {
-	background-color: #1e1e1e;
+	background: #1e1e1e url("./images/footer-bg.png") right top no-repeat;
 	padding: 3.6rem 2.5rem;
 	color: #fff;
+}
+
+.site-footer__container {
+	margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+	.site-footer__container {
+		display: flex;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.site-footer__container {
+		max-width: 1105px;
+	}
+}
+
+.site-footer__container > * {
+	flex: 1;
 }
 
 .site-footer__brand {
@@ -671,6 +729,151 @@ img {
 	.section-about .section__content {
 		padding-left: 0;
 	}
+}
+
+@media only screen and (min-width: 768px) {
+	.section-trainings .section__container {
+		flex-direction: row-reverse;
+	}
+}
+
+.certs {
+	background: url("./images/cert-bg.png") left bottom no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+	.certs .section__image-wrapper img {
+		margin-left: auto;
+		margin-right: 2rem;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.certs .section__image-wrapper img {
+		margin-right: 5rem;
+	}
+}
+
+.most .section__container {
+	background: url("./images/Frame.png") right center no-repeat;
+}
+
+@media only screen and (min-width: 768px) {
+	.most__footer {
+		margin-top: 3rem;
+		display: flex;
+		justify-content: center;
+		width: 709px;
+		margin-left: auto;
+		margin-right: auto;
+		align-items: center;
+	}
+	.most__footer p {
+		margin-bottom: 0;
+		margin-right: 2rem;
+	}
+	.most__footer .button {
+		width: auto;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.cta .section__container {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		max-width: 1046px;
+	}
+	.cta .section__container > div:nth-child(1) {
+		flex: 1 1 auto;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.cta .button {
+		padding-left: 6rem;
+		padding-right: 6rem;
+	}
+}
+
+.spec {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.spec .section__container {
+	position: relative;
+}
+
+.spec__artefact {
+	position: absolute;
+	top: 0;
+	transform: translateX(50%);
+	right: 0;
+}
+
+.site-info {
+	text-align: center;
+}
+
+.gallery {
+	width: 100%;
+	max-width: 1269px;
+	margin: 2rem auto;
+}
+
+@media only screen and (min-width: 768px) {
+	.gallery {
+		display: grid;
+		grid-template-areas: "one two three" "one four four" "five seven six" "eight seven nine";
+		grid-template-rows: 421px;
+		gap: 16px;
+	}
+	.gallery__item {
+		padding: 0;
+		overflow: hidden;
+		background-color: #9a1830;
+	}
+	.gallery__item img {
+		max-width: 100%;
+		width: 100%;
+		height: 100%;
+		max-height: 100%;
+		object-fit: cover;
+		transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+	}
+	.gallery__item:nth-child(1) {
+		grid-area: one;
+	}
+	.gallery__item:nth-child(2) {
+		grid-area: two;
+	}
+	.gallery__item:nth-child(3) {
+		grid-area: three;
+	}
+	.gallery__item:nth-child(4) {
+		grid-area: four;
+	}
+	.gallery__item:nth-child(5) {
+		grid-area: five;
+	}
+	.gallery__item:nth-child(6) {
+		grid-area: six;
+	}
+	.gallery__item:nth-child(7) {
+		grid-area: seven;
+	}
+	.gallery__item:nth-child(8) {
+		grid-area: eight;
+	}
+	.gallery__item:nth-child(9) {
+		grid-area: nine;
+	}
+}
+
+.gallery__link:hover img, .gallery__link:focus img {
+	transform: scale(1.3);
+	opacity: 0.54;
 }
 
 /*# sourceMappingURL=style.css.map */
