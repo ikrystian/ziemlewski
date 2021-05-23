@@ -153,24 +153,30 @@
         </div>
     </section>
 
-    <section class="section section--dark ">
-        <div class="section__image-wrapper section__image-wrapper--minus-top">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/about.png"
-                 alt="third section alternative text">
+    <section class="section section--dark section-about">
+        <div class="section__container">
+            <div class="section__image-wrapper section__image-wrapper--minus-top">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/about.png"
+                     alt="third section alternative text">
+            </div>
+            <div class="section__content">
+                <h2>O klinikach Ziemlewski</h2>
+                <p>Kliniki Ziemlewski specjalizują się w:</p>
+                <ul>
+                    <li>Medycynie estetycznej,</li>
+                    <li>Kosmetologii hi-tech,</li>
+                    <li>Ginekologii estetycznej</li>
+                    <li>Szkolenia medyczne dla lekarzy</li>
+                </ul>
+                <p>Nasza oferta obejmuje zarówno kuracje z zastosowaniem botoksu, kwasu hialuronowego oraz nici
+                    liftingujących
+                    jak i wykorzystujemy terapie wyszczuplające, modelujące oraz ujędrniające ciało. Z zakresu
+                    ginekologii
+                    estetycznej specjalizujemy się w zabiegach waginoplastyki oraz laserowym obkurczaniu pochwy,
+                    laserowym
+                    leczeniu nietrzymania moczu, powiększaniu punktu G oraz ujędrnianiu warg sromowych.</p>
+            </div>
         </div>
-        <h2>O klinikach Ziemlewski</h2>
-        <p>Kliniki Ziemlewski specjalizują się w:</p>
-        <ul>
-            <li>Medycynie estetycznej,</li>
-            <li>Kosmetologii hi-tech,</li>
-            <li>Ginekologii estetycznej</li>
-            <li>Szkolenia medyczne dla lekarzy</li>
-        </ul>
-        <p>Nasza oferta obejmuje zarówno kuracje z zastosowaniem botoksu, kwasu hialuronowego oraz nici liftingujących
-            jak i wykorzystujemy terapie wyszczuplające, modelujące oraz ujędrniające ciało. Z zakresu ginekologii
-            estetycznej specjalizujemy się w zabiegach waginoplastyki oraz laserowym obkurczaniu pochwy, laserowym
-            leczeniu nietrzymania moczu, powiększaniu punktu G oraz ujędrnianiu warg sromowych.</p>
-
         <div class="about-stats">
             <div class="about-stats__item">
                 <span class="about-stats__value">20</span>

@@ -312,6 +312,18 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
+	.section__image-wrapper--minus-top {
+		margin-top: -8rem;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.section__image-wrapper--minus-top {
+		margin-top: -11rem;
+	}
+}
+
+@media only screen and (min-width: 768px) {
 	.philosophy-section {
 		padding-top: 5rem;
 	}
@@ -475,6 +487,16 @@ img {
 	margin-top: 3rem;
 }
 
+@media only screen and (min-width: 1024px) {
+	.about-stats {
+		max-width: 1033px;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		margin-top: 10rem;
+	}
+}
+
 .about-stats__item {
 	border: 1px solid #fff;
 	text-align: center;
@@ -482,6 +504,17 @@ img {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+}
+
+@media only screen and (min-width: 1024px) {
+	.about-stats__item {
+		flex: 1;
+	}
+}
+
+.about-stats__item:nth-child(even) {
+	top: -2.5rem;
 }
 
 .about-stats__title {
@@ -613,6 +646,31 @@ img {
 .site-footer ul li {
 	padding-left: 2rem;
 	margin-bottom: 0.7rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.section-about .section__container {
+		display: flex;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.section-about .section__image-wrapper {
+		flex: 1;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.section-about .section__content {
+		padding-left: 2rem;
+		flex: 1;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.section-about .section__content {
+		padding-left: 0;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */
