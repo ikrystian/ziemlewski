@@ -837,13 +837,21 @@ img {
   max-width: 1269px;
   margin: 2rem auto;
 
+  img {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
   @include res(tab) {
     display: grid;
     grid-template-areas:
-      "one two three"
-      "one four four"
-      "five seven six"
-      "eight seven nine";
+      "one two"
+      "one three"
+      "four four"
+      "seven five"
+      "seven six"
+      "eight nine";
     grid-template-rows: 421px;
     gap: 16px;
 
@@ -897,15 +905,24 @@ img {
         grid-area: nine;
       }
     }
+
+    @include res(desktop) {
+      grid-template-areas:
+      "one two three"
+      "one four four"
+      "five seven six"
+      "eight seven nine";
+    }
   }
 
   &__link {
-
-    &:hover,
-    &:focus {
-      img {
-        transform: scale(1.3);
-        opacity: 0.54;
+    @include res(tab) {
+      &:hover,
+      &:focus {
+        img {
+          transform: scale(1.3);
+          opacity: 0.54;
+        }
       }
     }
   }
