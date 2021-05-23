@@ -17,6 +17,7 @@
         <div class="section__container dr-section__container">
             <div class="dr-section__image-wrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/dr-section-thumbnail.png"
+                     loading="lazy"
                      alt="first section alternative text">
             </div>
             <div class="dr-section__content">
@@ -35,6 +36,7 @@
         <div class="section__container section__container--flex section__container--reverse">
             <div class="section__image-wrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/god-1-image.png"
+                     loading="lazy"
                      alt="second section alternative text">
             </div>
             <div class="section__content">
@@ -58,6 +60,7 @@
 
             <div class="slide-section__wrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/frame-2.png" class="slide-list__artefact"
+                     loading="lazy"
                      role="presentation" alt="">
                 <div class="slide-section">
                     <ul class="slide-list">
@@ -168,6 +171,7 @@
         <div class="section__container">
             <div class="section__image-wrapper section__image-wrapper--minus-top">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/about.png"
+                     loading="lazy"
                      alt="third section alternative text">
             </div>
             <div class="section__content">
@@ -209,7 +213,7 @@
 
     <section class="section spec">
         <div class="section__container">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/spec-bg.png" alt="" class="spec__artefact">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/spec-bg.png" loading="lazy"  alt="" class="spec__artefact">
             <div class="section__content">
                 <h2>Specjalizacje kliniki</h2>
                 <p>Sprawdź nasze zabiegi i umów się na konsultacje</p>
@@ -219,6 +223,7 @@
                 <ul class="spec-list">
                     <li class="spec-list__item">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/spec.png" class="spec-list__image"
+                             loading="lazy"
                              alt="">
                         <div class="spec-list__content">
                             <h3 class="spec-list__title">Twarz</h3>
@@ -230,6 +235,7 @@
 
                     <li class="spec-list__item">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/spec.png" class="spec-list__image"
+                             loading="lazy"
                              alt="">
                         <div class="spec-list__content">
                             <h3 class="spec-list__title">Twarz</h3>
@@ -241,6 +247,7 @@
 
                     <li class="spec-list__item">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/spec.png" class="spec-list__image"
+                             loading="lazy"
                              alt="">
                         <div class="spec-list__content">
                             <h3 class="spec-list__title">Twarz</h3>
@@ -259,6 +266,7 @@
         <div class="section__container section__container--flex">
             <div class="section__image-wrapper section__image-wrapper--minus-top">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/training.png" class="section__image"
+                     loading="lazy"
                      alt="">
 
             </div>
@@ -277,7 +285,7 @@
     <section class="section certs">
         <div class="section__container section__container--flex">
             <div class="section__image-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/certs.png" class="section__image" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/certs.png" class="section__image" alt="" loading="lazy">
             </div>
 
             <div class="section__content">
@@ -300,6 +308,7 @@
                 <li class="most-list__item">
                     <span class="most-list__circle">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/problem.svg"
+                             loading="lazy"
                              class="most-list__icon" alt="">
                     </span>
                     <h3 class="most-list__title">Tkanka tłuszczowa</h3>
@@ -308,6 +317,7 @@
                 <li class="most-list__item">
                     <span class="most-list__circle">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/problem.svg"
+                             loading="lazy"
                              class="most-list__icon" alt="">
                     </span>
                     <h3 class="most-list__title">Rozstępy</h3>
@@ -316,6 +326,7 @@
                 <li class="most-list__item">
                     <span class="most-list__circle">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/problem.svg"
+                             loading="lazy"
                              class="most-list__icon" alt="">
                     </span>
                     <h3 class="most-list__title">Zmarszczki</h3>
@@ -334,6 +345,7 @@
         <div class="section__content instagram-section__content">
             <h2 class="section__title section__title--center">Dołącz do nas</h2>
             <a href="http://instagram.com"> <img
+                        loading="lazy"
                         src="<?php echo get_template_directory_uri(); ?>/images/isnta-title.svg"></a>
         </div>
     </section>

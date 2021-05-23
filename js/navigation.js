@@ -14,5 +14,17 @@
 		`;
             body.append(template);
         })
+
+
+        const overlay = $('.contact-overlay');
+        $('.contact-overlay__hide-button').on('click', function() {
+            overlay.removeClass('contact-overlay--opened');
+        })
+
+        $('.menu a').on('click', function(e) {
+            e.preventDefault();
+            overlay.addClass('contact-overlay--opened');
+
+        })
     });
 })(jQuery)

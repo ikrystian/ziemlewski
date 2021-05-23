@@ -50,6 +50,33 @@ $bp-wide: 1440px;
   }
 }
 
+.title {
+  padding-left: 54px;
+  position: relative;
+  font-weight: 400;
+  font-size: 3.6rem;
+  line-height: 3.9rem;
+  font-family: Didot, sans-serif;
+  margin-bottom: 31px;
+  text-transform: capitalize;
+
+  @include res(tab) {
+    font-size: 5.5rem;
+    line-height: 6rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 38px;
+    height: 4px;
+    background-color: $primary-color;
+    left: 0;
+    top: 23px;
+  }
+}
+
 @font-face {
   font-family: "didot";
   src: url("./fonts/didot.ttf") format("truetype");
@@ -266,30 +293,7 @@ img {
   }
 
   h2 {
-    padding-left: 54px;
-    position: relative;
-    font-weight: 400;
-    font-size: 3.6rem;
-    line-height: 3.9rem;
-    font-family: Didot, sans-serif;
-    margin-bottom: 31px;
-    text-transform: capitalize;
-
-    @include res(tab) {
-      font-size: 5.5rem;
-      line-height: 6rem;
-    }
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 38px;
-      height: 4px;
-      background-color: $primary-color;
-      left: 0;
-      top: 23px;
-    }
+    @extend .title;
   }
 
   &__title {
@@ -937,6 +941,117 @@ img {
   background-color: rgba(0, 0, 0, 0.85);
   display: grid;
   place-items: center;
+  z-index: 100000;
+}
+
+.contact-overlay {
+  transform: translateX(100%);
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  transition: transform 0.5s ease-in-out, opacity 0.8s ease-in-out;
+  opacity: 0;
+
+  &::before {
+    content: '';
+    display: block;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &--opened {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  &__title {
+    @extend .title;
+    text-transform: none;
+  }
+
+  &__hide-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    text-transform: uppercase;
+    color: $primary-color;
+    font-family: Montserrat, sans-serif;
+    border: 0;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+    span {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__content {
+    position: relative;
+    background-color: #fff;
+    padding: 5rem;
+    margin-left: auto;
+    width: 100%;
+    max-width: 778px;
+    height: 100%;
+  }
+}
+
+.contact-form {
+  max-width: 339px;
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-of-type) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__required {
+    color: $primary-color;
+  }
+
+  &__label {
+    cursor: pointer;
+    margin-bottom: 0.25rem;
+  }
+
+  &__input,
+  &__select,
+  &__textarea {
+    outline: none;
+    font-family: Montserrat, sans-serif;
+    color: #333;
+    font-size: 1.6rem;
+    background-color: #F3F3F3;
+    padding: 1rem 2rem 1rem 1.5rem;
+    border: 0;
+    border-left: 0.5rem solid #f3f3f3;
+    transition: border-color 0.2s ease;
+
+    &:focus {
+      border-left-color: $primary-color;
+    }
+  }
+
+  &__privacy {
+    label {
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+    }
+  }
 }
 
 //#slider {
