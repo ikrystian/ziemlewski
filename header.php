@@ -74,6 +74,9 @@
                 <span>Powrót</span>
             </button>
             <h2 class="contact-overlay__title">Umów się na konsultacje:</h2>
+
+            <div class="contact-overlay__row">
+
             <form action="" class="contact-form">
                 <div class="contact-form__group">
                     <label class="contact-form__label" for="name">Imię i nazwisko <span
@@ -117,5 +120,14 @@
                     <button class="button button--primary">Wyślij</button>
                 </footer>
             </form>
+                <div class="contact-overlay__info">
+                    <h3>Centralna recepcja</h3>
+                    <p>Centralna recepcja</p>
+                    <p><a href="">48 000 000 000</a></p>
+                    <p><a href="mailto:centrala@klinikiziemlewski.pl">centrala@klinikiziemlewski.pl</a></p>
+                    <p>pn - pt: 10:00 - 19:00</p>
+                    <p>sb - nd: Nieczynne</p>
+                </div>
+            </div>
         </div>
     </section>

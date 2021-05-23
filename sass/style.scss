@@ -1028,6 +1028,41 @@ img {
     opacity: 1;
   }
 
+  &__row {
+    @include res(tab) {
+      display: flex;
+    }
+  }
+
+  &__info {
+    @include res(tab) {
+      padding-left: 4rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      color: #333;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      font-family: Montserrat, sans-serif;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: $primary-color;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
   &__title {
     @extend .title;
     text-transform: none;

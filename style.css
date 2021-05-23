@@ -983,6 +983,40 @@ img {
 	opacity: 1;
 }
 
+@media only screen and (min-width: 768px) {
+	.contact-overlay__row {
+		display: flex;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.contact-overlay__info {
+		padding-left: 4rem;
+	}
+}
+
+.contact-overlay__info h3 {
+	font-size: 1.3rem;
+	color: #333;
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 1rem;
+	font-family: Montserrat, sans-serif;
+}
+
+.contact-overlay__info p {
+	margin-bottom: 0.5rem;
+}
+
+.contact-overlay__info a {
+	color: #9a1830;
+	text-decoration: none;
+}
+
+.contact-overlay__info a:hover, .contact-overlay__info a:focus {
+	text-decoration: underline;
+}
+
 .contact-overlay__title {
 	text-transform: none;
 }
