@@ -1239,6 +1239,10 @@ img {
 	padding: 2.5rem;
 }
 
+.contact-page__info {
+	margin-bottom: 3rem;
+}
+
 .contact-page__form {
 	background-color: #fff;
 	padding: 20px;
@@ -1246,6 +1250,12 @@ img {
 
 .cities {
 	background-color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+	.cities {
+		max-width: 406px;
+	}
 }
 
 .cities dt {
@@ -1299,6 +1309,15 @@ img {
 	padding: 0;
 }
 
+@media only screen and (min-width: 768px) {
+	.map-section {
+		background: url("./images/map-desktop.png") center no-repeat;
+		background-size: cover;
+		padding: 13rem 5rem;
+		margin: -2.5rem;
+	}
+}
+
 .map-section__mobile-image {
 	display: block;
 	margin-left: -2.5rem;
@@ -1306,8 +1325,22 @@ img {
 	margin-bottom: 2.5rem;
 }
 
+@media only screen and (min-width: 768px) {
+	.map-section__mobile-image {
+		display: none;
+	}
+}
+
 .trainings {
 	padding: 0;
+	margin-bottom: -2.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.trainings {
+		display: flex;
+		flex-direction: row-reverse;
+	}
 }
 
 .trainings__image {
@@ -1319,6 +1352,14 @@ img {
 	margin-right: -2.5rem;
 }
 
+@media only screen and (min-width: 768px) {
+	.trainings__image {
+		flex: 1;
+		height: unset;
+		margin-left: 0;
+	}
+}
+
 .trainings__image img {
 	position: absolute;
 	left: 50%;
@@ -1327,8 +1368,29 @@ img {
 	max-width: 190px;
 }
 
+@media only screen and (min-width: 768px) {
+	.trainings__image img {
+		max-width: 286px;
+		left: 0;
+		bottom: 75px;
+		transform: translateX(-50%);
+	}
+}
+
 .trainings__content {
 	padding: 8rem 0 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.trainings__content {
+		flex: 1;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.trainings__content > div {
+		max-width: 626px;
+		padding-right: 200px;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

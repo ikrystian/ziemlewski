@@ -1289,6 +1289,7 @@ img {
 
   &__info {
     @extend .contact-overlay__info;
+    margin-bottom: 3rem;
   }
 
   &__form {
@@ -1301,6 +1302,10 @@ img {
 
 .cities {
   background-color: #fff;
+
+  @include res(tab) {
+    max-width: 406px;
+  }
 
   dt {
     padding: 1.8rem;
@@ -1356,16 +1361,33 @@ img {
 .map-section {
   padding: 0;
 
+  @include res(tab) {
+    background: url('./images/map-desktop.png') center no-repeat;
+    background-size: cover;
+    padding: 13rem 5rem;
+    margin: -2.5rem;
+  }
+
   &__mobile-image {
     display: block;
     margin-left: -2.5rem;
     margin-right: -2.5rem;
     margin-bottom: 2.5rem;
+
+    @include res(tab) {
+      display: none;
+    }
   }
 }
 
 .trainings {
   padding: 0;
+  margin-bottom: -2.5rem;
+
+  @include res(tab) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 
   &__image {
     height: 364px;
@@ -1375,12 +1397,25 @@ img {
     margin-left: -2.5rem;
     margin-right: -2.5rem;
 
+    @include res(tab){
+      flex: 1;
+      height: unset;
+      margin-left: 0;
+    }
+
     img {
       position: absolute;
       left: 50%;
       bottom: 0;
       transform: translate(-50%, 50%);
       max-width: 190px;
+
+      @include res(tab) {
+        max-width: 286px;
+        left: 0;
+        bottom: 75px;
+        transform: translateX(-50%)
+      }
     }
   }
 
@@ -1390,6 +1425,17 @@ img {
 
   &__content {
     padding: 8rem 0 2rem;
+
+    @include res(tab){
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+
+      > div {
+        max-width: 626px;
+        padding-right: 200px;
+      }
+    }
   }
 
 

@@ -17,16 +17,20 @@
 
 
         const overlay = $('.contact-overlay');
-        $('.contact-overlay__hide-button').on('click', function() {
+        $('.contact-overlay__hide-button').on('click', function () {
             overlay.removeClass('contact-overlay--opened');
         })
 
-        $('.consultation-button a').on('click', function(e) {
+        $('.consultation-button a').on('click', function (e) {
             e.preventDefault();
             overlay.addClass('contact-overlay--opened');
         });
 
-        $('.cities dt').on('click', function() {
+        $('.cities dt').on('click', function () {
+            if ($(this).hasClass('active')) {
+                return false;
+            }
+
             $('.cities dt').removeClass('active');
             $(this).addClass('active');
             $('.cities dd').slideUp();

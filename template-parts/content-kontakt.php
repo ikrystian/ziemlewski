@@ -69,7 +69,7 @@
 
         <section class="section contact-page__map map-section">
             <div class="map-section__mobile-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/mobile-map.png" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/map-desktop.png" alt="">
             </div>
             <div class="section__container">
 
@@ -111,15 +111,18 @@
 
         <section class="section trainings">
             <div class="trainings__image">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/trainings-image-2.png" class="trainings__trainings-image-2" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/trainings-image-2.png"
+                     class="trainings__trainings-image-2" alt="">
             </div>
             <div class="trainings__content">
-                <h3 class="trainings__title">Szkolenia dla lekarzy</h3>
-                <p>Chcesz udoskonalić swoje umiejętności lub rozpocząć przygodę z medycyną estetyczną?</p>
-                <p>Zapraszamy na indywidualne szkolenia z autorskich metod dr Krzysztofa Ziemlewskiego!</p>
-                <p>Zostaw nam swój kontakt:</p>
-                <p>tel.: <a href="tel:796600125">796 600 125</a></p>
-                <p>email: <a href="mailto:cmo@tulipmedicalgroup.co">cmo@tulipmedicalgroup.com</a></p>
+                <div>
+                    <h3 class="trainings__title">Szkolenia dla lekarzy</h3>
+                    <p>Chcesz udoskonalić swoje umiejętności lub rozpocząć przygodę z medycyną estetyczną?</p>
+                    <p>Zapraszamy na indywidualne szkolenia z autorskich metod dr Krzysztofa Ziemlewskiego!</p>
+                    <p>Zostaw nam swój kontakt:</p>
+                    <p>tel.: <a href="tel:796600125">796 600 125</a></p>
+                    <p>email: <a href="mailto:cmo@tulipmedicalgroup.co">cmo@tulipmedicalgroup.com</a></p>
+                </div>
             </div>
         </section>
 
