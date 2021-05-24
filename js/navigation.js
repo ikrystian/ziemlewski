@@ -24,7 +24,13 @@
         $('.consultation-button a').on('click', function(e) {
             e.preventDefault();
             overlay.addClass('contact-overlay--opened');
+        });
 
+        $('.cities dt').on('click', function() {
+            $('.cities dt').removeClass('active');
+            $(this).addClass('active');
+            $('.cities dd').slideUp();
+            $(this).next().slideToggle();
         })
     });
 })(jQuery)

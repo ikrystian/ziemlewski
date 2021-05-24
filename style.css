@@ -22,6 +22,15 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+a {
+	color: #9a1830;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	text-decoration: underline;
+}
+
 .button, .header .consultation-button a, .header .booking-button a {
 	background-color: #9a1830;
 	color: #fff;
@@ -59,7 +68,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	background-color: #9a1830;
 }
 
-.title, .section h2, .contact-overlay__title {
+.title, .section h2, .contact-overlay__title, .contact-page__title, .trainings__title {
 	padding-left: 54px;
 	position: relative;
 	font-weight: 400;
@@ -71,13 +80,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 
 @media only screen and (min-width: 768px) {
-	.title, .section h2, .contact-overlay__title {
+	.title, .section h2, .contact-overlay__title, .contact-page__title, .trainings__title {
 		font-size: 5.5rem;
 		line-height: 6rem;
 	}
 }
 
-.title::before, .section h2::before, .contact-overlay__title::before {
+.title::before, .section h2::before, .contact-overlay__title::before, .contact-page__title::before, .trainings__title::before {
 	content: "";
 	display: block;
 	position: absolute;
@@ -135,6 +144,10 @@ img {
 	max-width: 100%;
 }
 
+.page-template-default {
+	background-color: #F1F6F9;
+}
+
 .header {
 	padding: 27px 31px;
 	width: 100%;
@@ -144,8 +157,8 @@ img {
 
 .header__page-title {
 	color: #fff;
-	font-size: 8rem;
-	line-height: 8.4rem;
+	font-size: 4.5rem;
+	line-height: 4.7rem;
 	text-align: center;
 	font-family: Didot, sans-serif;
 	width: 100%;
@@ -161,6 +174,8 @@ img {
 
 @media only screen and (min-width: 1024px) {
 	.header__page-title {
+		font-size: 8rem;
+		line-height: 8.4rem;
 		margin-top: 8rem;
 		margin-bottom: 5rem;
 	}
@@ -196,9 +211,15 @@ img {
 }
 
 .header .menu {
-	display: flex;
+	display: none;
 	margin: 0;
 	padding: 0;
+}
+
+@media only screen and (min-width: 768px) {
+	.header .menu {
+		display: flex;
+	}
 }
 
 .header .menu li {
@@ -1047,11 +1068,13 @@ img {
 	position: fixed;
 	right: 0;
 	top: 0;
+	display: none;
 	bottom: 0;
 	left: 0;
 	z-index: 100000;
 	transition: transform 0.5s ease-in-out, opacity 0.8s ease-in-out;
 	opacity: 0;
+	width: 0;
 }
 
 .contact-overlay::before {
@@ -1068,6 +1091,8 @@ img {
 .contact-overlay--opened {
 	transform: translateX(0);
 	opacity: 1;
+	display: block;
+	width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1077,12 +1102,12 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-	.contact-overlay__info {
+	.contact-overlay__info, .contact-page__info {
 		padding-left: 4rem;
 	}
 }
 
-.contact-overlay__info h3 {
+.contact-overlay__info h3, .contact-page__info h3 {
 	font-size: 1.3rem;
 	color: #333;
 	text-transform: uppercase;
@@ -1091,16 +1116,16 @@ img {
 	font-family: Montserrat, sans-serif;
 }
 
-.contact-overlay__info p {
+.contact-overlay__info p, .contact-page__info p {
 	margin-bottom: 0.5rem;
 }
 
-.contact-overlay__info a {
+.contact-overlay__info a, .contact-page__info a {
 	color: #9a1830;
 	text-decoration: none;
 }
 
-.contact-overlay__info a:hover, .contact-overlay__info a:focus {
+.contact-overlay__info a:hover, .contact-page__info a:hover, .contact-overlay__info a:focus, .contact-page__info a:focus {
 	text-decoration: underline;
 }
 
@@ -1140,7 +1165,7 @@ img {
 
 .contact-form {
 	max-width: 339px;
-	margin-bottom: 50rem;
+	margin-bottom: 5rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1197,7 +1222,7 @@ img {
 
 .gallery-categories a {
 	display: inline-block;
-	padding: 1rem 1rem 0.5rem 1rem;
+	padding: 1rem 1.5rem 0.5rem 1.5rem;
 	color: #fff;
 	font-size: 1.5rem;
 	text-transform: uppercase;
@@ -1208,6 +1233,102 @@ img {
 
 .gallery-categories a.active, .gallery-categories a:hover, .gallery-categories a:focus {
 	border-bottom-color: #9a1830;
+}
+
+.contact-page {
+	padding: 2.5rem;
+}
+
+.contact-page__form {
+	background-color: #fff;
+	padding: 20px;
+}
+
+.cities {
+	background-color: #fff;
+}
+
+.cities dt {
+	padding: 1.8rem;
+	border-top: 1px solid #f3f3f3;
+	color: #333;
+	font-size: 2.6rem;
+	line-height: 2.8rem;
+	font-family: Didot, sans-serif;
+	position: relative;
+	text-transform: capitalize;
+}
+
+.cities dt::after {
+	width: 16px;
+	height: 10px;
+	content: '';
+	display: block;
+	position: absolute;
+	right: 1.8rem;
+	top: calc(50% - 5px);
+	background: url("./images/arrow.png") center no-repeat;
+	transition: transform 0.2s ease-in-out;
+}
+
+.cities dt.active::after {
+	transform: rotate(180deg);
+}
+
+.cities dd {
+	padding: 0 1.8rem 1.8rem 1.8rem;
+	display: none;
+}
+
+.cities dd:first-of-type {
+	display: block;
+}
+
+.cities dd a:not(.button) {
+	color: #9a1830;
+	text-decoration: none;
+	display: inline-block;
+	margin-bottom: 1.5rem;
+}
+
+.cities dd a:not(.button):hover, .cities dd a:not(.button):focus {
+	text-decoration: underline;
+}
+
+.map-section {
+	padding: 0;
+}
+
+.map-section__mobile-image {
+	display: block;
+	margin-left: -2.5rem;
+	margin-right: -2.5rem;
+	margin-bottom: 2.5rem;
+}
+
+.trainings {
+	padding: 0;
+}
+
+.trainings__image {
+	height: 364px;
+	background: url("./images/trainings.png") center no-repeat;
+	background-size: cover;
+	position: relative;
+	margin-left: -2.5rem;
+	margin-right: -2.5rem;
+}
+
+.trainings__image img {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translate(-50%, 50%);
+	max-width: 190px;
+}
+
+.trainings__content {
+	padding: 8rem 0 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -63,11 +63,13 @@
             <?php if(!is_front_page()) : ?>
             <div class="header__content header__content--detailed">
                <h1 class="header__page-title"> <?php echo the_title(); ?></h1>
+                <?php if(is_page('Galeria')): ?>
                 <ul class="gallery-categories">
                     <li><a href="" class="active">Nasz zespół</a></li>
                     <li><a href="">Technologia</a></li>
                     <li><a href="">Temat</a></li>
                 </ul>
+                <?php endif; ?>
             </div>
             <?php endif; ?>
         </header><!-- #masthead -->
