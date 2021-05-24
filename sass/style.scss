@@ -1283,6 +1283,18 @@ img {
 .contact-page {
   padding: 2.5rem;
 
+  &__top {
+    width: 100%;
+    max-width: 1118px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include res(tab) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
   &__title {
     @extend .title;
   }
@@ -1290,13 +1302,33 @@ img {
   &__info {
     @extend .contact-overlay__info;
     margin-bottom: 3rem;
+    padding: 1.5rem 4rem 4rem 4rem;
   }
 
   &__form {
     background-color: #fff;
     padding: 20px;
+
+    @include res(tab) {
+      margin-top: -8rem;
+      padding-top: 8rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
+      width: 100%;
+      max-width: 882px;
+    }
   }
 
+  &__form-footer {
+    @include res(tab) {
+      margin-top: 3rem;
+
+      .button {
+        width: 339px;
+        display: inline-block;
+      }
+    }
+  }
 }
 
 
@@ -1437,8 +1469,6 @@ img {
       }
     }
   }
-
-
 }
 
 //#slider {

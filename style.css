@@ -1239,13 +1239,49 @@ img {
 	padding: 2.5rem;
 }
 
+.contact-page__top {
+	width: 100%;
+	max-width: 1118px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+	.contact-page__top {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+}
+
 .contact-page__info {
 	margin-bottom: 3rem;
+	padding: 1.5rem 4rem 4rem 4rem;
 }
 
 .contact-page__form {
 	background-color: #fff;
 	padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+	.contact-page__form {
+		margin-top: -8rem;
+		padding-top: 8rem;
+		padding-left: 4rem;
+		padding-right: 4rem;
+		width: 100%;
+		max-width: 882px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.contact-page__form-footer {
+		margin-top: 3rem;
+	}
+	.contact-page__form-footer .button, .contact-page__form-footer .header .consultation-button a, .header .consultation-button .contact-page__form-footer a, .contact-page__form-footer .header .booking-button a, .header .booking-button .contact-page__form-footer a {
+		width: 339px;
+		display: inline-block;
+	}
 }
 
 .cities {
