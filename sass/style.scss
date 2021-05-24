@@ -171,11 +171,37 @@ img {
 
 .header {
   padding: 27px 31px;
+  width: 100%;
+  max-width: 1485px;
+  margin: auto;
+
+  &__page-title {
+    color: #fff;
+    font-size: 8rem;
+    line-height: 8.4rem;
+    text-align: center;
+    font-family: Didot, sans-serif;
+    width: 100%;
+    font-weight: 400;
+
+    @include res(tab) {
+      margin-top: 5rem;
+      margin-bottom: 3rem;
+    }
+
+    @include res(desktop) {
+      margin-top: 8rem;
+      margin-bottom: 5rem;
+    }
+  }
 
   &__content {
-    display: flex;
-    justify-content: space-between;
+    display: flex;    justify-content: space-between;
     align-items: center;
+
+    &--detailed {
+      flex-direction: column;
+    }
   }
 
   &__contact-section {
@@ -187,56 +213,97 @@ img {
       font-weight: 700;
       opacity: 0.8;
     }
+
+    @include res(tab) {
+      display: none;
+    }
   }
 
   .custom-logo {
     max-width: 60px;
   }
-}
 
-.menu {
-  display: flex;
-  margin: 0;
-  padding: 0;
 
-  li {
+  .menu {
     display: flex;
-    align-items: center;
-  }
+    margin: 0;
+    padding: 0;
 
-  a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 0.25rem;
-    position: relative;
-    z-index: 2;
-
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 2px;
-      z-index: -1;
-      height: 0;
-      background-color: $primary-color;
-      opacity: 0;
-      transform: translateY(100%);
-      transition: transform 0.2s ease, opacity 0.2s ease, height 0.2s ease;
+    li {
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
     }
 
-    &:hover,
-    &:focus {
+    a {
+      font-size: 1.5rem;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0.25rem;
+      position: relative;
+      z-index: 2;
+
       &::before {
-        transform: translateY(0);
-        opacity: 1;
-        height: 8px;
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 2px;
+        z-index: -1;
+        height: 0;
+        background-color: $primary-color;
+        opacity: 0;
+        transform: translateY(100%);
+        transition: transform 0.2s ease, opacity 0.2s ease, height 0.2s ease;
+      }
+
+      &:hover,
+      &:focus {
+        &::before {
+          transform: translateY(0);
+          opacity: 1;
+          height: 8px;
+        }
+      }
+    }
+  }
+
+  .consultation-button {
+    a {
+      @extend .button;
+      padding: 1rem 2rem;
+
+      &::before {
+        display: none !important;
+      }
+    }
+  }
+
+  .booking-button {
+    a {
+      @extend .button;
+      padding: 1rem 2rem;
+      background-color: transparent;
+      border-color: #fff;
+      color: #fff;
+      transition: border-color 0.2s ease;
+
+      &:hover,
+      &:focus {
+        color: #fff;
+        border-color: $primary-color;
+        background-color: transparent;
+      }
+
+      &::before {
+        display: none !important;
       }
     }
   }
 }
+
 
 .main-navigation {
   &__mobile-menu {
@@ -894,9 +961,15 @@ img {
 }
 
 .gallery {
+  position: relative;
+  top: -2rem;
   width: 100%;
   max-width: 1269px;
-  margin: 2rem auto;
+  margin:  0 auto 2rem auto;
+
+  @include res(tab) {
+    top: -5rem;
+  }
 
   img {
     display: block;
@@ -915,6 +988,10 @@ img {
       "eight nine";
     grid-template-rows: 421px;
     gap: 16px;
+
+    @include res(desktop) {
+      gap: 32px;
+    }
 
     &__item {
       padding: 0;
@@ -1043,7 +1120,7 @@ img {
       font-size: 1.3rem;
       color: #333;
       text-transform: uppercase;
-      font-weight: 400;
+      font-weight: 600;
       margin-bottom: 1rem;
       font-family: Montserrat, sans-serif;
     }
@@ -1101,6 +1178,11 @@ img {
 
 .contact-form {
   max-width: 339px;
+  margin-bottom: 50rem;
+
+  @include res(tab) {
+    margin-bottom: 0;
+  }
 
   &__group {
     display: flex;
@@ -1146,13 +1228,30 @@ img {
   }
 }
 
-.consultation-button {
-  a {
-    @extend .button;
-    padding: 1rem 2rem;
+.gallery-categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
 
-    &::before {
-      display: none !important;
+  li {
+
+  }
+
+  a {
+    display: inline-block;
+    padding: 1rem 1rem 0.5rem 1rem;
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.2s ease;
+
+    &.active,
+    &:hover,
+    &:focus {
+      border-bottom-color: $primary-color;
     }
   }
 }

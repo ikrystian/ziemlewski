@@ -22,7 +22,7 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.button, .consultation-button a {
+.button, .header .consultation-button a, .header .booking-button a {
 	background-color: #9a1830;
 	color: #fff;
 	text-decoration: none;
@@ -36,7 +36,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
-.button:hover, .consultation-button a:hover, .button:focus, .consultation-button a:focus {
+.button:hover, .header .consultation-button a:hover, .header .booking-button a:hover, .button:focus, .header .consultation-button a:focus, .header .booking-button a:focus {
 	background-color: #fff;
 	color: #9a1830;
 }
@@ -137,12 +137,43 @@ img {
 
 .header {
 	padding: 27px 31px;
+	width: 100%;
+	max-width: 1485px;
+	margin: auto;
+}
+
+.header__page-title {
+	color: #fff;
+	font-size: 8rem;
+	line-height: 8.4rem;
+	text-align: center;
+	font-family: Didot, sans-serif;
+	width: 100%;
+	font-weight: 400;
+}
+
+@media only screen and (min-width: 768px) {
+	.header__page-title {
+		margin-top: 5rem;
+		margin-bottom: 3rem;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.header__page-title {
+		margin-top: 8rem;
+		margin-bottom: 5rem;
+	}
 }
 
 .header__content {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.header__content--detailed {
+	flex-direction: column;
 }
 
 .header__contact-section a {
@@ -154,22 +185,30 @@ img {
 	opacity: 0.8;
 }
 
+@media only screen and (min-width: 768px) {
+	.header__contact-section {
+		display: none;
+	}
+}
+
 .header .custom-logo {
 	max-width: 60px;
 }
 
-.menu {
+.header .menu {
 	display: flex;
 	margin: 0;
 	padding: 0;
 }
 
-.menu li {
+.header .menu li {
 	display: flex;
 	align-items: center;
+	padding-left: 16px;
 }
 
-.menu a {
+.header .menu a {
+	font-size: 1.5rem;
 	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -178,7 +217,7 @@ img {
 	z-index: 2;
 }
 
-.menu a::before {
+.header .menu a::before {
 	content: '';
 	display: block;
 	position: absolute;
@@ -193,10 +232,36 @@ img {
 	transition: transform 0.2s ease, opacity 0.2s ease, height 0.2s ease;
 }
 
-.menu a:hover::before, .menu a:focus::before {
+.header .menu a:hover::before, .header .menu a:focus::before {
 	transform: translateY(0);
 	opacity: 1;
 	height: 8px;
+}
+
+.header .consultation-button a {
+	padding: 1rem 2rem;
+}
+
+.header .consultation-button a::before {
+	display: none !important;
+}
+
+.header .booking-button a {
+	padding: 1rem 2rem;
+	background-color: transparent;
+	border-color: #fff;
+	color: #fff;
+	transition: border-color 0.2s ease;
+}
+
+.header .booking-button a:hover, .header .booking-button a:focus {
+	color: #fff;
+	border-color: #9a1830;
+	background-color: transparent;
+}
+
+.header .booking-button a::before {
+	display: none !important;
 }
 
 .main-navigation__mobile-menu {
@@ -450,7 +515,7 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-	.dr-section__content .button, .dr-section__content .consultation-button a, .consultation-button .dr-section__content a {
+	.dr-section__content .button, .dr-section__content .header .consultation-button a, .header .consultation-button .dr-section__content a, .dr-section__content .header .booking-button a, .header .booking-button .dr-section__content a {
 		display: inline-block;
 		width: auto;
 		padding-left: 6rem;
@@ -830,7 +895,7 @@ img {
 		margin-bottom: 0;
 		margin-right: 2rem;
 	}
-	.most__footer .button, .most__footer .consultation-button a, .consultation-button .most__footer a {
+	.most__footer .button, .most__footer .header .consultation-button a, .header .consultation-button .most__footer a, .most__footer .header .booking-button a, .header .booking-button .most__footer a {
 		width: auto;
 	}
 }
@@ -848,7 +913,7 @@ img {
 }
 
 @media only screen and (min-width: 1024px) {
-	.cta .button, .cta .consultation-button a, .consultation-button .cta a {
+	.cta .button, .cta .header .consultation-button a, .header .consultation-button .cta a, .cta .header .booking-button a, .header .booking-button .cta a {
 		padding-left: 6rem;
 		padding-right: 6rem;
 	}
@@ -875,9 +940,17 @@ img {
 }
 
 .gallery {
+	position: relative;
+	top: -2rem;
 	width: 100%;
 	max-width: 1269px;
-	margin: 2rem auto;
+	margin: 0 auto 2rem auto;
+}
+
+@media only screen and (min-width: 768px) {
+	.gallery {
+		top: -5rem;
+	}
 }
 
 .gallery img {
@@ -893,6 +966,15 @@ img {
 		grid-template-rows: 421px;
 		gap: 16px;
 	}
+}
+
+@media only screen and (min-width: 768px) and (min-width: 1024px) {
+	.gallery {
+		gap: 32px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
 	.gallery__item {
 		padding: 0;
 		overflow: hidden;
@@ -1004,7 +1086,7 @@ img {
 	font-size: 1.3rem;
 	color: #333;
 	text-transform: uppercase;
-	font-weight: 400;
+	font-weight: 600;
 	margin-bottom: 1rem;
 	font-family: Montserrat, sans-serif;
 }
@@ -1058,6 +1140,13 @@ img {
 
 .contact-form {
 	max-width: 339px;
+	margin-bottom: 50rem;
+}
+
+@media only screen and (min-width: 768px) {
+	.contact-form {
+		margin-bottom: 0;
+	}
 }
 
 .contact-form__group {
@@ -1099,12 +1188,26 @@ img {
 	line-height: 1.3rem;
 }
 
-.consultation-button a {
-	padding: 1rem 2rem;
+.gallery-categories {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-bottom: 5rem;
 }
 
-.consultation-button a::before {
-	display: none !important;
+.gallery-categories a {
+	display: inline-block;
+	padding: 1rem 1rem 0.5rem 1rem;
+	color: #fff;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom-color 0.2s ease;
+}
+
+.gallery-categories a.active, .gallery-categories a:hover, .gallery-categories a:focus {
+	border-bottom-color: #9a1830;
 }
 
 /*# sourceMappingURL=style.css.map */
