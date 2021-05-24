@@ -22,6 +22,43 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.button, .consultation-button a {
+	background-color: #9a1830;
+	color: #fff;
+	text-decoration: none;
+	border: 2px solid #9a1830;
+	text-transform: uppercase;
+	padding: 1.4rem;
+	display: block;
+	width: 100%;
+	text-align: center;
+	letter-spacing: 1px;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.button:hover, .consultation-button a:hover, .button:focus, .consultation-button a:focus {
+	background-color: #fff;
+	color: #9a1830;
+}
+
+.button--secondary {
+	font-weight: 500;
+	background-color: transparent;
+	color: #9a1830;
+}
+
+.button--accent {
+	color: #9a1830;
+	background-color: #fff;
+	border-color: #fff;
+	font-weight: 500;
+}
+
+.button--accent:hover, .button--accent:focus {
+	color: #fff;
+	background-color: #9a1830;
+}
+
 .title, .section h2, .contact-overlay__title {
 	padding-left: 54px;
 	position: relative;
@@ -125,6 +162,11 @@ img {
 	display: flex;
 	margin: 0;
 	padding: 0;
+}
+
+.menu li {
+	display: flex;
+	align-items: center;
 }
 
 .menu a {
@@ -339,43 +381,6 @@ img {
 	margin-bottom: 2rem;
 }
 
-.section .button {
-	background-color: #9a1830;
-	color: #fff;
-	text-decoration: none;
-	border: 2px solid #9a1830;
-	text-transform: uppercase;
-	padding: 1.4rem;
-	display: block;
-	width: 100%;
-	text-align: center;
-	letter-spacing: 1px;
-	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-
-.section .button:hover, .section .button:focus {
-	background-color: #fff;
-	color: #9a1830;
-}
-
-.section .button--secondary {
-	font-weight: 500;
-	background-color: transparent;
-	color: #9a1830;
-}
-
-.section .button--accent {
-	color: #9a1830;
-	background-color: #fff;
-	border-color: #fff;
-	font-weight: 500;
-}
-
-.section .button--accent:hover, .section .button--accent:focus {
-	color: #fff;
-	background-color: #9a1830;
-}
-
 .section__image-wrapper {
 	margin-bottom: 4rem;
 }
@@ -445,7 +450,7 @@ img {
 }
 
 @media only screen and (min-width: 768px) {
-	.dr-section__content .button {
+	.dr-section__content .button, .dr-section__content .consultation-button a, .consultation-button .dr-section__content a {
 		display: inline-block;
 		width: auto;
 		padding-left: 6rem;
@@ -825,7 +830,7 @@ img {
 		margin-bottom: 0;
 		margin-right: 2rem;
 	}
-	.most__footer .button {
+	.most__footer .button, .most__footer .consultation-button a, .consultation-button .most__footer a {
 		width: auto;
 	}
 }
@@ -843,7 +848,7 @@ img {
 }
 
 @media only screen and (min-width: 1024px) {
-	.cta .button {
+	.cta .button, .cta .consultation-button a, .consultation-button .cta a {
 		padding-left: 6rem;
 		padding-right: 6rem;
 	}
@@ -1092,6 +1097,14 @@ img {
 .contact-form__privacy label {
 	font-size: 1.1rem;
 	line-height: 1.3rem;
+}
+
+.consultation-button a {
+	padding: 1rem 2rem;
+}
+
+.consultation-button a::before {
+	display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */

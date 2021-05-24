@@ -42,7 +42,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/images/gallery/6.png" class="gallery__image" alt="">
             </a>
         </li>
-        <li class="gallry__item">
+        <li class="gallery__item">
             <a href="<?php echo get_template_directory_uri(); ?>/images/gallery/7.png" class="gallery__link">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/gallery/7.png" class="gallery__image" alt="">
             </a>

@@ -21,7 +21,7 @@
             overlay.removeClass('contact-overlay--opened');
         })
 
-        $('.menu a').on('click', function(e) {
+        $('.consultation-button a').on('click', function(e) {
             e.preventDefault();
             overlay.addClass('contact-overlay--opened');
 

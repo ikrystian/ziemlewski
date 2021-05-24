@@ -50,6 +50,45 @@ $bp-wide: 1440px;
   }
 }
 
+.button {
+  background-color: $primary-color;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid $primary-color;
+  text-transform: uppercase;
+  padding: 1.4rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 1px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: #fff;
+    color: $primary-color;
+  }
+
+  &--secondary {
+    font-weight: 500;
+    background-color: transparent;
+    color: $primary-color;
+  }
+
+  &--accent {
+    color: $primary-color;
+    background-color: #fff;
+    border-color: #fff;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: $primary-color;
+    }
+  }
+}
+
 .title {
   padding-left: 54px;
   position: relative;
@@ -161,7 +200,8 @@ img {
   padding: 0;
 
   li {
-
+    display: flex;
+    align-items: center;
   }
 
   a {
@@ -250,7 +290,6 @@ img {
       @include res(tab) {
         display: flex;
       }
-
 
       .section__image-wrapper {
         @include res(tab) {
@@ -371,45 +410,6 @@ img {
 
   p {
     margin-bottom: 2rem;
-  }
-
-  .button {
-    background-color: $primary-color;
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid $primary-color;
-    text-transform: uppercase;
-    padding: 1.4rem;
-    display: block;
-    width: 100%;
-    text-align: center;
-    letter-spacing: 1px;
-    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-
-    &:hover,
-    &:focus {
-      background-color: #fff;
-      color: $primary-color;
-    }
-
-    &--secondary {
-      font-weight: 500;
-      background-color: transparent;
-      color: $primary-color;
-    }
-
-    &--accent {
-      color: $primary-color;
-      background-color: #fff;
-      border-color: #fff;
-      font-weight: 500;
-
-      &:hover,
-      &:focus {
-        color: #fff;
-        background-color: $primary-color;
-      }
-    }
   }
 
   &__image-wrapper {
@@ -1142,6 +1142,17 @@ img {
     label {
       font-size: 1.1rem;
       line-height: 1.3rem;
+    }
+  }
+}
+
+.consultation-button {
+  a {
+    @extend .button;
+    padding: 1rem 2rem;
+
+    &::before {
+      display: none !important;
     }
   }
 }
