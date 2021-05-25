@@ -50,6 +50,11 @@ $bp-wide: 1440px;
   }
 }
 
+// helpers class
+.text-center {
+  text-align: center;
+}
+
 a {
   color: $primary-color;
   text-decoration: none;
@@ -58,6 +63,15 @@ a {
   &:focus {
     text-decoration: underline;
   }
+}
+
+.skip-link {
+  height: 0;
+  width: 0;
+  position: fixed;
+  left: -1px;
+  top: -1px;
+  overflow: hidden;
 }
 
 .button {
@@ -179,7 +193,7 @@ img {
   max-width: 100%;
 }
 
-.page-template-default {
+.page-template-default:not(.home) {
   background-color: #F1F6F9;
 }
 
@@ -197,6 +211,7 @@ img {
     font-family: Didot, sans-serif;
     width: 100%;
     font-weight: 400;
+    margin-bottom: 2rem;
 
     @include res(tab) {
       margin-top: 5rem;
@@ -322,6 +337,15 @@ img {
       }
     }
   }
+
+  &__description {
+    color: #fff;
+    text-align: center;
+    font-family: Didot, sans-serif;
+    font-size: 1.9rem;
+    line-height: 2.8rem;
+    font-weight: 400;
+  }
 }
 
 
@@ -348,6 +372,13 @@ img {
 .top {
   background: $primary-section-background-color url("./images/section-mosaic.webp") center no-repeat;
   background-size: cover;
+  @include res(tab) {
+    padding-bottom: 5rem;
+  }
+
+  @include res(desktop) {
+    padding-bottom: 7.5rem;
+  }
 }
 
 .section {
@@ -359,6 +390,10 @@ img {
 
   @include res(desktop) {
     padding: 7.5rem 2.5rem;
+  }
+
+  &--white {
+    background-color: #fff;
   }
 
   &__container {
@@ -479,6 +514,23 @@ img {
     @extend .title;
   }
 
+  h3 {
+    font-family: Didot, sans-serif;
+    font-size: 3.5rem;
+    line-height: 3.8rem;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-family: Didot, sans-serif;
+    font-size: 2.9rem;
+    line-height: 3.1rem;
+    color: #9f9f9f;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+
   &__title {
     margin-top: 2rem;
 
@@ -527,7 +579,7 @@ img {
 }
 
 .dr-section {
-  margin-top: -50px;
+  margin-top: -5rem;
 
   &__container {
     @include res(tab) {
@@ -577,6 +629,11 @@ img {
       flex: 1;
       display: flex;
       margin-bottom: 0;
+      padding-right: 5rem;
+    }
+
+    img {
+      object-fit: contain;
     }
   }
 
@@ -1226,6 +1283,10 @@ img {
     margin-bottom: 0.25rem;
   }
 
+  &__select {
+    text-transform: capitalize;
+  }
+
   &__input,
   &__select,
   &__textarea {
@@ -1314,6 +1375,7 @@ img {
       padding-top: 8rem;
       padding-left: 4rem;
       padding-right: 4rem;
+      margin-bottom: 4rem;
       width: 100%;
       max-width: 882px;
     }
@@ -1429,6 +1491,19 @@ img {
     margin-left: -2.5rem;
     margin-right: -2.5rem;
 
+    &::after {
+      content: '';
+      width: 224px;
+      height: 224px;
+      display: block;
+      position: absolute;
+      background: url('./images/frame-2.png') center no-repeat;
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
     @include res(tab){
       flex: 1;
       height: unset;
@@ -1438,6 +1513,7 @@ img {
     img {
       position: absolute;
       left: 50%;
+      z-index: 3;
       bottom: 0;
       transform: translate(-50%, 50%);
       max-width: 190px;

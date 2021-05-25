@@ -21,7 +21,6 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'klinika'); ?></a>
 
@@ -61,16 +60,20 @@
                 </nav><!-- #site-navigation -->
             </div>
             <?php if(!is_front_page()) : ?>
-            <div class="header__content header__content--detailed">
-               <h1 class="header__page-title"> <?php echo the_title(); ?></h1>
-                <?php if(is_page('Galeria')): ?>
-                <ul class="gallery-categories">
-                    <li><a href="" class="active">Nasz zespół</a></li>
-                    <li><a href="">Technologia</a></li>
-                    <li><a href="">Temat</a></li>
-                </ul>
-                <?php endif; ?>
-            </div>
+                <div class="header__content header__content--detailed">
+                    <h1 class="header__page-title"> <?php echo the_title(); ?></h1>
+                    <?php if(is_page('Galeria')): ?>
+                        <ul class="gallery-categories">
+                            <li><a href="" class="active">Nasz zespół</a></li>
+                            <li><a href="">Technologia</a></li>
+                            <li><a href="">Temat</a></li>
+                        </ul>
+                    <?php endif; ?>
+
+                    <?php if(is_page('O nas')): ?>
+                        <div class="header__description">Nie tylko sprawiamy, że Twoje ciało wygląda lepiej i poprawiamy Twoje samopoczucie, ale i wywieramy na Twój organizm działanie lecznicze, które zaczyna się od już na poziomie komórek i tkanek.</div>
+                    <?php endif; ?>
+                </div>
             <?php endif; ?>
         </header><!-- #masthead -->
         <div id="slider"></div>
@@ -89,49 +92,54 @@
 
             <div class="contact-overlay__row">
 
-            <form action="" class="contact-form">
-                <div class="contact-form__group">
-                    <label class="contact-form__label" for="name">Imię i nazwisko <span
-                                class="contact-form__required">*</span></label>
-                    <input type="text" placeholder="Podaj swoje imię i nazwisko" id="name" class="contact-form__input"
-                           required>
-                </div>
-                <div class="contact-form__group">
-                    <label class="contact-form__label" for="tel">Telefon <span
-                                class="contact-form__required">*</span></label>
-                    <input type="tel" placeholder="Twój numer telefonu" id="tel" class="contact-form__input" required>
-                </div>
+                <form action="" class="contact-form">
+                    <div class="contact-form__group">
+                        <label class="contact-form__label" for="name">Imię i nazwisko <span
+                                    class="contact-form__required">*</span></label>
+                        <input type="text" placeholder="Podaj swoje imię i nazwisko" id="name" class="contact-form__input"
+                               required>
+                    </div>
+                    <div class="contact-form__group">
+                        <label class="contact-form__label" for="tel">Telefon <span
+                                    class="contact-form__required">*</span></label>
+                        <input type="tel" placeholder="Twój numer telefonu" id="tel" class="contact-form__input" required>
+                    </div>
 
-                <div class="contact-form__group">
-                    <label class="contact-form__label" for="email">E-mail <span class="contact-form__required">*</span></label>
-                    <input type="email" placeholder="Twój adres email" id="email" class="contact-form__input" required>
-                </div>
+                    <div class="contact-form__group">
+                        <label class="contact-form__label" for="email">E-mail <span class="contact-form__required">*</span></label>
+                        <input type="email" placeholder="Twój adres email" id="email" class="contact-form__input" required>
+                    </div>
 
-                <div class="contact-form__group">
-                    <label class="contact-form__label" for="city">Miasto <span
-                                class="contact-form__required">*</span></label>
-                    <select name="city" id="city" class="contact-form__select">
-                        <option value="">Wybierz miasto</option>
-                    </select>
-                </div>
+                    <div class="contact-form__group">
+                        <label class="contact-form__label" for="city">Miasto <span
+                                    class="contact-form__required">*</span></label>
+                        <select name="city" id="city" class="contact-form__select">
+                            <option value="">Wybierz miasto</option>
+                            <option value="">Warszawa</option>
+                            <option value="">wrocław</option>
+                            <option value="">poznań</option>
+                            <option value="">kraków</option>
+                            <option value="">łódź</option>
+                        </select>
+                    </div>
 
-                <div class="contact-form__group">
-                    <label class="contact-form__label" for="message">Wiadomość</label>
-                    <textarea name="message" class="contact-form__textarea" id="message" cols="30" rows="10"></textarea>
-                </div>
+                    <div class="contact-form__group">
+                        <label class="contact-form__label" for="message">Wiadomość</label>
+                        <textarea name="message" class="contact-form__textarea" id="message" cols="30" rows="10"></textarea>
+                    </div>
 
-                <div class="contact-form__privacy">
-                    <input type="checkbox" id="">
-                    <label for="">Zgadzam się na przetwarzanie moich danych osobowych w związku z Rozporządzeniem
-                        Parlamentu Europejskiego i Rady UE w sprawie ochrony osób fizycznych w związku z przetwarzaniem
-                        danych osobowych i w sprawie swobodnego przepływu takich danych (RODO) z dnia 27.04.2016 r. oraz
-                        rosnącej wartości informacji.</label>
-                </div>
+                    <div class="contact-form__privacy">
+                        <input type="checkbox" id="">
+                        <label for="">Zgadzam się na przetwarzanie moich danych osobowych w związku z Rozporządzeniem
+                            Parlamentu Europejskiego i Rady UE w sprawie ochrony osób fizycznych w związku z przetwarzaniem
+                            danych osobowych i w sprawie swobodnego przepływu takich danych (RODO) z dnia 27.04.2016 r. oraz
+                            rosnącej wartości informacji.</label>
+                    </div>
 
-                <footer class="form__footer">
-                    <button class="button button--primary">Wyślij</button>
-                </footer>
-            </form>
+                    <footer class="form__footer">
+                        <button class="button button--primary">Wyślij</button>
+                    </footer>
+                </form>
                 <div class="contact-overlay__info">
                     <h3>Centralna recepcja</h3>
                     <p>Centralna recepcja</p>
@@ -143,3 +151,4 @@
             </div>
         </div>
     </section>
+    <?php wp_body_open(); ?>

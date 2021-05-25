@@ -22,6 +22,10 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.text-center {
+	text-align: center;
+}
+
 a {
 	color: #9a1830;
 	text-decoration: none;
@@ -29,6 +33,15 @@ a {
 
 a:hover, a:focus {
 	text-decoration: underline;
+}
+
+.skip-link {
+	height: 0;
+	width: 0;
+	position: fixed;
+	left: -1px;
+	top: -1px;
+	overflow: hidden;
 }
 
 .button, .header .consultation-button a, .header .booking-button a {
@@ -144,7 +157,7 @@ img {
 	max-width: 100%;
 }
 
-.page-template-default {
+.page-template-default:not(.home) {
 	background-color: #F1F6F9;
 }
 
@@ -163,6 +176,7 @@ img {
 	font-family: Didot, sans-serif;
 	width: 100%;
 	font-weight: 400;
+	margin-bottom: 2rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -285,6 +299,15 @@ img {
 	display: none !important;
 }
 
+.header__description {
+	color: #fff;
+	text-align: center;
+	font-family: Didot, sans-serif;
+	font-size: 1.9rem;
+	line-height: 2.8rem;
+	font-weight: 400;
+}
+
 .main-navigation__mobile-menu {
 	background-color: transparent;
 	border: 0;
@@ -311,6 +334,18 @@ img {
 	background-size: cover;
 }
 
+@media only screen and (min-width: 768px) {
+	.top {
+		padding-bottom: 5rem;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.top {
+		padding-bottom: 7.5rem;
+	}
+}
+
 .section {
 	padding: 2.5rem;
 }
@@ -325,6 +360,10 @@ img {
 	.section {
 		padding: 7.5rem 2.5rem;
 	}
+}
+
+.section--white {
+	background-color: #fff;
 }
 
 .section__container {
@@ -447,6 +486,23 @@ img {
 	color: #fff;
 }
 
+.section h3 {
+	font-family: Didot, sans-serif;
+	font-size: 3.5rem;
+	line-height: 3.8rem;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
+.section h4 {
+	font-family: Didot, sans-serif;
+	font-size: 2.9rem;
+	line-height: 3.1rem;
+	color: #9f9f9f;
+	font-weight: 400;
+	margin-bottom: 2rem;
+}
+
 .section__title {
 	margin-top: 2rem;
 }
@@ -500,7 +556,7 @@ img {
 }
 
 .dr-section {
-	margin-top: -50px;
+	margin-top: -5rem;
 }
 
 @media only screen and (min-width: 768px) {
@@ -559,7 +615,12 @@ img {
 		flex: 1;
 		display: flex;
 		margin-bottom: 0;
+		padding-right: 5rem;
 	}
+}
+
+.dr-section__image-wrapper img {
+	object-fit: contain;
 }
 
 .slide-section {
@@ -1192,6 +1253,10 @@ img {
 	margin-bottom: 0.25rem;
 }
 
+.contact-form__select {
+	text-transform: capitalize;
+}
+
 .contact-form__input, .contact-form__select, .contact-form__textarea {
 	outline: none;
 	font-family: Montserrat, sans-serif;
@@ -1269,6 +1334,7 @@ img {
 		padding-top: 8rem;
 		padding-left: 4rem;
 		padding-right: 4rem;
+		margin-bottom: 4rem;
 		width: 100%;
 		max-width: 882px;
 	}
@@ -1388,6 +1454,19 @@ img {
 	margin-right: -2.5rem;
 }
 
+.trainings__image::after {
+	content: '';
+	width: 224px;
+	height: 224px;
+	display: block;
+	position: absolute;
+	background: url("./images/frame-2.png") center no-repeat;
+	top: 50%;
+	left: 0;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+}
+
 @media only screen and (min-width: 768px) {
 	.trainings__image {
 		flex: 1;
@@ -1399,6 +1478,7 @@ img {
 .trainings__image img {
 	position: absolute;
 	left: 50%;
+	z-index: 3;
 	bottom: 0;
 	transform: translate(-50%, 50%);
 	max-width: 190px;

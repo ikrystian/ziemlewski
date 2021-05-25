@@ -46,6 +46,11 @@
                                 class="contact-form__required">*</span></label>
                     <select name="city" id="city" class="contact-form__select">
                         <option value="">Wybierz miasto</option>
+                        <option value="">Warszawa</option>
+                        <option value="">wrocław</option>
+                        <option value="">poznań</option>
+                        <option value="">kraków</option>
+                        <option value="">łódź</option>
                     </select>
                 </div>
 
