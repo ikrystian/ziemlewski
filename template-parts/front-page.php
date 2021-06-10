@@ -12,15 +12,37 @@
 
 <header class="page-top">
     <div class="header__content header__content--detailed">
-        <?php echo do_shortcode('[sp_testimonial id="81"]'); ?>
+        <div class="main-slider__wrapper">
+            <div class="main-slider">
+                <div class="single-slide">
+                    <img class="single-slide__main-image"
+                         src="<?php echo get_template_directory_uri(); ?>/images/home-slider.png" alt="">
+                    <div class="single-slide__content">
+                        <h2>Miejsce gdzie medycyna spotyka się ze sztuką</h2>
+                        <a href="#">umów konsultacje</a>
+                        <img src="http://localhost/klinika/wp-content/uploads/2021/06/zielmewski-signature.png" alt="">
+                    </div>
+                </div>
+                <div class="single-slide">
+                    <img class="single-slide__main-image"
+                         src="<?php echo get_template_directory_uri(); ?>/images/home-slider.png" alt="">
+                    <div class="single-slide__content">
+                        <h2>Miejsce gdzie medycyna spotyka się ze sztuką</h2>
+                        <a href="#">umów konsultacje</a>
+                        <img src="http://localhost/klinika/wp-content/uploads/2021/06/zielmewski-signature.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 </header>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <?php klinika_post_thumbnail(); ?>
 
-    <section class="dr-section section">
+    <section class="dr-section section" data-aos="fade-in">
         <div class="section__container dr-section__container">
             <div class="dr-section__image-wrapper section__image-wrapper--minus-top">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/dr-section-thumbnail.png"
@@ -34,12 +56,12 @@
                     Międzynarodowy Key Opinion Leader w metodach wielokierunkowego odmładzania twarzy. </p>
                 <p>Posiada bogate doświadczenie w korekcji i modelowaniu twarzy z użyciem kwasu hialuronowego, kwasu
                     polimlekowego, hydroksyapatytu wapnia oraz toksyny botulinowej.</p>
-                <p><a href="#" class="button">Więcej informacji</a></p>
+                <p><a href="#" class="button button--inline">Więcej informacji</a></p>
             </div>
         </div>
     </section>
 
-    <section class="section philosophy-section">
+    <section class="section philosophy-section" data-aos="fade-in">
         <div class="section__container section__container--flex section__container--reverse">
             <div class="section__image-wrapper">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/god-1-image.png"
@@ -58,7 +80,7 @@
         </div>
     </section>
 
-    <section class="section section--gray">
+    <section class="section section--gray" data-aos="fade-in">
         <div class="section__container">
             <div class="section__content">
                 <h2>Autorskie Terapie Zabiegowe</h2>
@@ -174,7 +196,7 @@
         </div>
     </section>
 
-    <section class="section section--dark section-about">
+    <section class="section section--dark section-about" data-aos="fade-in">
         <div class="section__container">
             <div class="section__image-wrapper section__image-wrapper--minus-top">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/about.png"
@@ -218,9 +240,10 @@
 
     </section>
 
-    <section class="section spec">
+    <section class="section spec" data-aos="fade-in">
         <div class="section__container">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/spec-bg.png" loading="lazy"  alt="" class="spec__artefact">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/spec-bg.png" loading="lazy" alt=""
+                 class="spec__artefact">
             <div class="section__content">
                 <h2>Specjalizacje kliniki</h2>
                 <p>Sprawdź nasze zabiegi i umów się na konsultacje</p>
@@ -235,7 +258,7 @@
                         <div class="spec-list__content">
                             <h3 class="spec-list__title">Twarz</h3>
                             <p class="spec-list__description">Opracowaliśmy swoją własną metodę łączącą kuracje z
-                                zastosowaniem botoksu, kwasu hialuronowego oraz nici liftingujących</p>
+                                zastosowaniem botoksu kwasu hialuronowego oraz nici liftingujących</p>
                             <a href="" class="button">Poznaj zabiegi</a>
                         </div>
                     </li>
@@ -269,7 +292,7 @@
         </div>
     </section>
 
-    <section class="section section--gray section-trainings">
+    <section class="section section--gray section-trainings"  data-aos="fade-in">
         <div class="section__container section__container--flex">
             <div class="section__image-wrapper section__image-wrapper--minus-top">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/training.png" class="section__image"
@@ -289,10 +312,11 @@
         </div>
     </section>
 
-    <section class="section certs">
+    <section class="section certs"  data-aos="fade-in">
         <div class="section__container section__container--flex">
             <div class="section__image-wrapper">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/certs.png" class="section__image" alt="" loading="lazy">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/certs.png" class="section__image" alt=""
+                     loading="lazy">
             </div>
 
             <div class="section__content">
@@ -307,7 +331,7 @@
     </section>
 
 
-    <section class="section section--gray most">
+    <section class="section section--gray most"  data-aos="fade-in">
         <div class="section__container">
             <h2 class="section__title section__title--center">Najczęstsze problemy naszych Pacjentek</h2>
 
@@ -348,7 +372,7 @@
 
     </section>
 
-    <section class="section instagram-section">
+    <section class="section instagram-section"  data-aos="fade-in">
         <div class="section__content instagram-section__content">
             <h2 class="section__title section__title--center">Dołącz do nas</h2>
             <a href="http://instagram.com"> <img
@@ -357,7 +381,7 @@
         </div>
     </section>
 
-    <section class="section section--primary cta">
+    <section class="section section--primary cta"  data-aos="fade-in">
         <div class="section__container">
             <div>
                 <h2>Umów się na wizytę w Twoim mieście</h2>

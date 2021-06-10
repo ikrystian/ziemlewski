@@ -22,7 +22,7 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 $primary-color: #9a1830;
 $primary-font-color: #333333;
@@ -137,7 +137,7 @@ a {
   }
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     width: 38px;
@@ -149,13 +149,13 @@ a {
 }
 
 @font-face {
-  font-family: "didot";
-  src: url("./fonts/didot.ttf") format("truetype");
+  font-family: 'didot';
+  src: url('./fonts/didot.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "monteros";
-  src: url("./fonts/monteros.ttf") format("truetype");
+  font-family: 'monteros';
+  src: url('./fonts/monteros.ttf') format('truetype');
 }
 
 * {
@@ -176,7 +176,7 @@ html {
 body {
   font-size: 1.6rem;
   line-height: 2.7rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   //font-family: 'Poppins', sans-serif;
 }
 
@@ -202,7 +202,7 @@ img {
 }
 
 .page-template-default:not(.home) {
-  background-color: #F1F6F9;
+  background-color: #f1f6f9;
 }
 
 .header {
@@ -265,7 +265,7 @@ img {
       opacity: 0.8;
     }
 
-    @include res(tab) {
+    @media screen and (min-width: 992px) {
       display: none;
     }
   }
@@ -274,13 +274,12 @@ img {
     max-width: 60px;
   }
 
-
   .menu {
     display: none;
     margin: 0;
     padding: 0;
 
-    @include res(tab) {
+    @media screen and (min-width: 992px) {
       display: flex;
     }
 
@@ -387,11 +386,16 @@ img {
 
   &__content {
     display: flex;
+    flex-direction: column;
     max-width: 1485px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
+
+    @include res(tab) {
+      flex-direction: row;
+    }
   }
 
   &__wrapper {
@@ -474,23 +478,22 @@ img {
     background-color: transparent;
     border: 0;
 
-    @include res(tab) {
+    @media screen and (min-width: 992px) {
       display: none;
     }
-
   }
 
   .nav-menu {
     display: none;
 
-    @include res(tab) {
+    @media screen and (min-width: 992px) {
       display: block;
     }
   }
 }
 
 .page-top {
-  background: $primary-section-background-color url("./images/section-mosaic.webp") center no-repeat;
+  background: $primary-section-background-color url('./images/section-mosaic.webp') fixed center no-repeat;
   background-size: cover;
   min-height: 200px;
   padding-top: 15rem;
@@ -613,7 +616,7 @@ img {
   }
 
   &--dark {
-    background: $primary-section-background-color url("./images/section-mosaic.webp") center no-repeat;
+    background: $primary-section-background-color url('./images/section-mosaic.webp') center no-repeat;
     background-size: cover;
     color: #fff;
 
@@ -628,8 +631,8 @@ img {
         }
 
         &::before {
-          content: "";
-          background: url("./images/check.svg") center no-repeat;
+          content: '';
+          background: url('./images/check.svg') center no-repeat;
           width: 24px;
           height: 24px;
           display: block;
@@ -766,7 +769,7 @@ img {
     margin-bottom: 31px;
 
     @include res(tab) {
-      flex: 1.5
+      flex: 1.5;
     }
 
     @include res(desktop) {
@@ -780,7 +783,6 @@ img {
       object-fit: contain;
     }
   }
-
 }
 
 .slide-section {
@@ -795,7 +797,7 @@ img {
   }
 
   &__wrapper {
-    position: relative
+    position: relative;
   }
 
   &::-webkit-scrollbar {
@@ -810,7 +812,6 @@ img {
   &::-webkit-scrollbar-thumb {
     background-color: rgba(#1e1e1e, 0.2);
   }
-
 }
 
 .slide-list {
@@ -914,13 +915,13 @@ img {
 
   &__title {
     text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     line-height: 2rem;
   }
 
   &__value {
-    font-family: "monteros", sans-serif;
+    font-family: 'monteros', sans-serif;
     font-size: 7rem;
     margin-top: -2.5rem;
     line-height: 1;
@@ -950,7 +951,7 @@ img {
 
   &__title {
     margin-top: 1.7rem;
-    font-family: "didot", sans-serif;
+    font-family: 'didot', sans-serif;
     font-size: 2.6rem;
     line-height: 2.8rem;
     font-weight: 400;
@@ -979,7 +980,7 @@ img {
       }
 
       .spec-list__description {
-        font-family: "didot", sans-serif;
+        font-family: 'didot', sans-serif;
         font-size: 2.5rem;
       }
     }
@@ -1020,7 +1021,7 @@ img {
 .instagram-section {
   margin-top: 2rem;
   margin-bottom: 9rem;
-  background: url("./images/instagram.png") center no-repeat;
+  background: url('./images/instagram.png') center no-repeat;
 
   &__content {
     background-color: rgba(255, 255, 255, 0.8);
@@ -1221,15 +1222,20 @@ img {
     margin-bottom: 2rem;
   }
 
+  &__item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   @include res(tab) {
     display: grid;
     grid-template-areas:
-      "one two"
-      "one three"
-      "four four"
-      "seven five"
-      "seven six"
-      "eight nine";
+      'one two'
+      'one three'
+      'four four'
+      'seven five'
+      'seven six'
+      'eight nine';
     grid-template-rows: 421px;
     gap: 16px;
 
@@ -1290,10 +1296,10 @@ img {
 
     @include res(desktop) {
       grid-template-areas:
-      "one two three"
-      "one four four"
-      "five seven six"
-      "eight seven nine";
+        'one two three'
+        'one four four'
+        'five seven six'
+        'eight seven nine';
     }
   }
 
@@ -1462,7 +1468,7 @@ img {
     font-family: Montserrat, sans-serif;
     color: #333;
     font-size: 1.6rem;
-    background-color: #F3F3F3;
+    background-color: #f3f3f3;
     padding: 1rem 2rem 1rem 1.5rem;
     border: 0;
     border-left: 0.5rem solid #f3f3f3;
@@ -1488,7 +1494,6 @@ img {
   margin-bottom: 5rem;
 
   li {
-
   }
 
   a {
@@ -1514,6 +1519,8 @@ img {
 
   &__column {
     display: flex;
+    flex-direction: column;
+
     @include res(tab) {
       > div {
         &:first-child {
@@ -1524,6 +1531,10 @@ img {
           padding-left: 10px;
         }
       }
+    }
+
+    @media screen and (min-width: 992px) {
+      flex-direction: row;
     }
   }
 
@@ -1576,7 +1587,6 @@ img {
   }
 }
 
-
 .cities {
   background-color: #fff;
 
@@ -1618,7 +1628,7 @@ img {
     display: none;
 
     &:first-of-type {
-      display: block
+      display: block;
     }
 
     a:not(.button) {
@@ -1705,7 +1715,7 @@ img {
         max-width: 286px;
         left: 0;
         bottom: 75px;
-        transform: translateX(-50%)
+        transform: translateX(-50%);
       }
     }
   }
@@ -1738,7 +1748,7 @@ img {
 .faq {
   &--grey {
     .faq__item {
-      background-color: #F3F3F3;
+      background-color: #f3f3f3;
 
       @include res(tab) {
         padding-left: 8rem;
@@ -1780,7 +1790,7 @@ img {
 
     &--active {
       img {
-        transform: rotate(180deg)
+        transform: rotate(180deg);
       }
 
       + .faq__content {
@@ -1863,13 +1873,12 @@ img {
 }
 
 .offer {
-
   &__header {
     @include res(tab) {
       display: grid;
       grid-template-areas:
-              "main-image main-title"
-              "main-image main-content";
+        'main-image main-title'
+        'main-image main-content';
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 10rem;
     }
@@ -1898,7 +1907,6 @@ img {
   }
 
   &__description {
-
     @include res(tab) {
       max-width: 691px;
     }
@@ -1910,7 +1918,6 @@ img {
 }
 
 .offer-details {
-
   > div {
     display: flex;
     flex-direction: column;
@@ -1943,7 +1950,7 @@ img {
     margin-bottom: 2rem;
     font-size: 1.6rem;
     font-weight: 700;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
   }
 
   &__tel {
@@ -1967,6 +1974,10 @@ img {
   &__description {
     text-align: center;
     margin-bottom: 5rem;
+  }
+
+  .section__container {
+    margin-top: 3rem;
   }
 }
 
@@ -2019,3 +2030,137 @@ img {
   }
 }
 
+.main-slider {
+  margin-bottom: 3rem;
+  max-width: 1269px;
+
+  @include res(tab) {
+    margin-bottom: 5rem;
+  }
+
+  @include res(desktop) {
+    margin-bottom: 7rem;
+  }
+
+  &__wrapper {
+    max-width: 80vw;
+  }
+
+  .slick-dots {
+    display: flex;
+    margin-top: 2rem;
+
+    li {
+      margin-right: 1rem;
+      padding-left: 0;
+
+      button {
+        width: 50px;
+        height: 8px;
+        border: 0;
+        text-indent: -50rem;
+        overflow: hidden;
+        background-color: rgba(255, 255, 255, 0.2);
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      &.slick-active {
+        button {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  .single-slide {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__content {
+      z-index: 2;
+      position: relative;
+      top: -8rem;
+      padding: 0 1rem;
+
+      a {
+        @extend .button;
+        @extend .button--inline;
+
+        margin-bottom: 2rem;
+      }
+
+      @include res(tab) {
+        top: 0;
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+      }
+
+      @include res(desktop) {
+        max-width: 60%;
+
+      }
+    }
+
+    h2 {
+      color: #fff;
+      font-size: 4.5rem;
+      font-weight: 400;
+      font-family: Didot, sans-serif;
+      line-height: 4.7rem;
+      margin-bottom: 2rem;
+
+      @include res(tab) {
+        font-size: 8rem;
+        line-height: 8.4rem;
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__main-image {
+      @include res(tab) {
+        z-index: 1;
+        display: block;
+        object-fit: contain;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.header {
+  .mobile-menu {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 9.5rem;
+    right: 0;
+    background-color: #fff;
+    display: none;
+    .menu {
+      display: none;
+    }
+  }
+}
+
+.mm {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  li {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  a {
+    font-size: 1.7rem;
+    color: #333333;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1rem;
+  }
+}

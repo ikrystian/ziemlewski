@@ -21,7 +21,7 @@
         </div>
     </div>
 </header>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>  data-aos="fade-in">
 
     <ul class="gallery">
         <li class="gallery__item">

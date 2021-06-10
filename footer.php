@@ -32,7 +32,21 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<link rel="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<link rel="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+ jQuery(document).ready(function(){
+    jQuery('.main-slider').slick({
+        "arrows" : false,
+        "dots" : true,
+        "items" : 1
+    });
+     AOS.init();
+});    
+</script>
 </body>
 </html>
 

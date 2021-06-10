@@ -21,20 +21,9 @@
         </div>
     </div>
 </header>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php
 
-    /**
-     * Template part for displaying front page
-     *
-     * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
-     *
-     * @package klinika
-     */
-
-    ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <section class="dr-section section">
+        <section class="dr-section section"  data-aos="fade-in">
             <div class="section__container dr-section__container">
                 <div class="dr-section__image-wrapper section__image-wrapper--minus-top">
                     <img src="http://localhost/klinika/wp-content/themes/klinika/images/dr-section-thumbnail.png"
@@ -62,7 +51,7 @@
             </div>
         </section>
 
-        <section class="section section--white">
+        <section class="section section--white"  data-aos="fade-in">
             <div class="section__container">
                 <h2 class="section__title">Lista szkoleń</h2>
                 <div class="faq faq--grey">
@@ -101,7 +90,7 @@
             </div>
         </section>
 
-        <section class="section section--white">
+        <section class="section section--white"  data-aos="fade-in">
             <div class="section__container">
                 <h2 class="section__title">Nie dla Ciebie? Nie szkodzi, zostaw nam swoje dane, poinforujemy Cię o nich:</h2>
                 <form action="" class="contact-form contact-page__form">
@@ -152,7 +141,7 @@
             </div>
         </section>
 
-        <section class="section section--primary cta">
+        <section class="section section--primary cta"  data-aos="fade-in">
             <div class="section__container">
                 <div>
                     <h2>Umów się na wizytę w Twoim mieście</h2>
@@ -164,4 +153,3 @@
             </div>
         </section>
 
-    </article>

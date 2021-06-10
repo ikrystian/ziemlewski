@@ -18,7 +18,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <div class="contact-page">
+    <div class="contact-page"  data-aos="fade-in">
         <div class="contact-page__top">
             <div class="contact-page__info">
                 <p>Centralna recepcja</p>
@@ -87,7 +87,7 @@
             </form>
         </div>
 
-        <section class="section contact-page__map map-section">
+        <section class="section contact-page__map map-section"  data-aos="fade-in">
             <div class="map-section__mobile-image">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/map-desktop.png" alt="">
             </div>
@@ -129,7 +129,7 @@
             </div>
         </section>
 
-        <section class="section trainings">
+        <section class="section trainings"  data-aos="fade-in">
             <div class="trainings__image">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/trainings-image-2.png"
                      class="trainings__trainings-image-2" alt="">
@@ -148,7 +148,7 @@
 
     </div>
 
-    <section class="section section--primary cta">
+    <section class="section section--primary cta"  data-aos="fade-in">
         <div class="section__container">
             <div>
                 <h2>Umów się na wizytę w Twoim mieście</h2>

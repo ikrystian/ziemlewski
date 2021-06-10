@@ -20,20 +20,9 @@
         </div>
     </div>
 </header>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php
 
-    /**
-     * Template part for displaying front page
-     *
-     * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
-     *
-     * @package klinika
-     */
-
-    ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <section class="dr-section section">
+        <section class="dr-section section"  data-aos="fade-in">
             <div class="section__container dr-section__container">
                 <div class="dr-section__image-wrapper section__image-wrapper--minus-top">
                     <img src="http://localhost/klinika/wp-content/themes/klinika/images/dr-section-thumbnail.png"
@@ -61,7 +50,7 @@
             </div>
         </section>
 
-        <section class="section section--white">
+        <section class="section section--white"  data-aos="fade-in">
             <div class="section__container">
                 <div class="text-center">
                     <p>Charyzma doktora i jego umiejętności sprawiają, że Kliniki Ziemlewski cieszą się ogromnym
@@ -73,7 +62,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section"  data-aos="fade-in">
             <div class="section__container section__container--flex">
                 <div class="section__image-wrapper">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about-image-1.png" alt="">
@@ -93,7 +82,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section"  data-aos="fade-in">
             <div class="section__container section__container--flex section__container--reverse">
                 <div class="section__image-wrapper">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about-image-2.png" alt="">
@@ -110,7 +99,7 @@
             </div>
         </section>
 
-        <section class="section section--dark testimonials">
+        <section class="section section--dark testimonials"  data-aos="fade-in">
             <div class="section__container">
                 <p class="testimonials__description">Opinie osób, które trafiły w ręce dr. Ziemlewskiego, są
                     najdobitniejszym dowodem jego kunsztu:</p>
@@ -118,7 +107,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section"  data-aos="fade-in">
             <div class="section__container section__container--flex section__container--reverse">
                 <div class="section__image-wrapper">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about-image-3.png" alt="">
@@ -143,7 +132,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section"  data-aos="fade-in">
             <div class="section__container">
                 <p class="text-center">Idea Golden Ratio znakomicie wpisuje się oczywiście w medycynę estetyczną,
                     dysponującą narzędziami
@@ -156,7 +145,7 @@
             </div>
         </section>
 
-        <section class="section section--white">
+        <section class="section section--white"  data-aos="fade-in">
             <h2 class="section__title section__title--center">Klinika</h2>
             <div class="section__container section__container--flex">
                 <div class="section__image-wrapper">
@@ -183,7 +172,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section"  data-aos="fade-in">
             <div class="section__container">
                 <p>W Klinikach Ziemlewski przywracamy młody wygląd twarzy, ciału oraz okolicom intymnym. Nasze
                     specjalności to:</p>
@@ -205,7 +194,7 @@
             </div>
         </section>
 
-        <section class="section section--primary cta">
+        <section class="section section--primary cta"  data-aos="fade-in">
             <div class="section__container">
                 <div>
                     <h2>Umów się na wizytę w Twoim mieście</h2>
@@ -217,4 +206,3 @@
             </div>
         </section>
 
-    </article>

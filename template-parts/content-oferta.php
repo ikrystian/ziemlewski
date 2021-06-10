@@ -39,7 +39,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('offer'); ?>>
 
     <div class="offer__content">
-        <section class="section">
+        <section class="section"  data-aos="fade-in">
             <div class="section__container ">
                 <div class="offer__description">
                     <h2 class="section__title">Na czym polega zabieg</h2>
@@ -127,7 +127,7 @@
             </div>
         </section>
 
-        <section class="section section--white sym">
+        <section class="section section--white sym"  data-aos="fade-in">
             <div class="section__container">
                 <h2 class="section__title">Kto wykona mój zabieg?</h2>
             </div>
@@ -151,7 +151,7 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section"  data-aos="fade-in">
             <div class="section__container section__container--flex  section__container--reverse">
                 <div class="even">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/how.png" alt="">
@@ -170,11 +170,14 @@
     </div>
 
 
-    <section class="section section--dark">
+    <section class="section section--dark testimonials"  data-aos="fade-in">
         <h2 class="section__title section__title--center">Opinie</h2>
+        <div class="section__container">
+            <?php echo do_shortcode('[sp_testimonial id="80"]'); ?>
+        </div>
     </section>
 
-    <section class="section">
+    <section class="section"  data-aos="fade-in">
         <div class="section__container">
             <h2 class="section__title">FAQ</h2>
 
@@ -211,7 +214,7 @@
         </div>
     </section>
 
-    <section class="section section--white spec">
+    <section class="section section--white spec"  data-aos="fade-in">
         <div class="section__container">
             <div class="section__content">
                 <h2>Przebieg zabiegu krok po kroku</h2>
@@ -248,7 +251,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section"  data-aos="fade-in">
         <div class="section__container">
             <div class="recommendations">
                 <div class="row">
@@ -281,7 +284,7 @@
         </div>
     </section>
 
-    <section class="section section--white">
+    <section class="section section--white"  data-aos="fade-in">
         <div class="section__container">
             <h2 class="section__title">Seo tekst</h2>
             <p>Innowacyjny, skuteczny i bezpieczny zabieg, który stanowi unikalne połączenie wolumetrii oraz medycyny
@@ -305,7 +308,7 @@
         </div>
     </section>
 
-    <section class="section section--primary cta">
+    <section class="section section--primary cta"  data-aos="fade-in">
         <div class="section__container">
             <div>
                 <h2>Umów się na wizytę w Twoim mieście</h2>
