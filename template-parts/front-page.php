@@ -9,13 +9,20 @@
  */
 
 ?>
+
+<header class="page-top">
+    <div class="header__content header__content--detailed">
+        <?php echo do_shortcode('[sp_testimonial id="81"]'); ?>
+    </div>
+</header>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <?php klinika_post_thumbnail(); ?>
 
     <section class="dr-section section">
         <div class="section__container dr-section__container">
-            <div class="dr-section__image-wrapper">
+            <div class="dr-section__image-wrapper section__image-wrapper--minus-top">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/dr-section-thumbnail.png"
                      loading="lazy"
                      alt="first section alternative text">

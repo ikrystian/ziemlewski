@@ -119,7 +119,7 @@ add_action( 'after_setup_theme', 'klinika_content_width', 0 );
 /**
  * Register widget area.
  *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
+ * @link https://developer.wordpress.org/themes/functional,ity/sidebars/#registering-a-sidebar
  */
 function klinika_widgets_init() {
 	register_sidebar(
@@ -190,3 +190,16 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function smallenvelop_widgets_init() {
+    register_sidebar( array(
+        'name' => __( 'Mega menu', 'klinika-ziemlewski' ),
+        'id' => 'mega-menu',
+        'before_widget' => '<div class="col">',
+        'after_widget' => '</div>',
+        'before_title' => '<span class="mega-menu__title">',
+        'after_title' => '</span>',
+    ) );
+}
+add_action( 'widgets_init', 'smallenvelop_widgets_init' );
+
+add_filter('show_admin_bar', '__return_false');

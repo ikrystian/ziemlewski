@@ -9,6 +9,18 @@
  */
 
 ?>
+<header class="page-top">
+    <div class="header__content header__content--detailed">
+        <h1 class="header__page-title"> <?php echo the_title(); ?></h1>
+        <div class="header__content header__content--detailed">
+            <ul class="gallery-categories">
+                <li><a href="" class="active">Nasz zespół</a></li>
+                <li><a href="">Technologia</a></li>
+                <li><a href="">Temat</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <ul class="gallery">

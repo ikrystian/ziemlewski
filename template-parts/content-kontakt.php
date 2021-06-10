@@ -9,6 +9,13 @@
  */
 
 ?>
+
+<header class="page-top">
+    <div class="header__content header__content--detailed">
+        <h1 class="header__page-title"> <?php echo the_title(); ?></h1>
+    </div>
+</header>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <div class="contact-page">
@@ -23,37 +30,44 @@
 
             <form action="" class="contact-form contact-page__form">
                 <h2 class="contact-page__title">Formularz kontaktowy</h2>
-                <div class="contact-form__group">
-                    <label class="contact-form__label" for="name">Imię i nazwisko <span
-                                class="contact-form__required">*</span></label>
-                    <input type="text" placeholder="Podaj swoje imię i nazwisko" id="name" class="contact-form__input"
-                           required>
-                </div>
-                <div class="contact-form__group">
-                    <label class="contact-form__label" for="tel">Telefon <span
-                                class="contact-form__required">*</span></label>
-                    <input type="tel" placeholder="Twój numer telefonu" id="tel" class="contact-form__input" required>
-                </div>
+                <div class="contact-page__column">
+                    <div class="contact-form__group">
+                        <label class="contact-form__label" for="name">Imię i nazwisko <span
+                                    class="contact-form__required">*</span></label>
+                        <input type="text" placeholder="Podaj swoje imię i nazwisko" id="name"
+                               class="contact-form__input"
+                               required>
+                    </div>
 
-                <div class="contact-form__group">
-                    <label class="contact-form__label" for="email">E-mail <span
-                                class="contact-form__required">*</span></label>
-                    <input type="email" placeholder="Twój adres email" id="email" class="contact-form__input" required>
+                    <div class="contact-form__group">
+                        <label class="contact-form__label" for="tel">Telefon <span
+                                    class="contact-form__required">*</span></label>
+                        <input type="tel" placeholder="Twój numer telefonu" id="tel" class="contact-form__input"
+                               required>
+                    </div>
                 </div>
+                <div class="contact-page__column">
+                    <div class="contact-form__group">
+                        <label class="contact-form__label" for="email">E-mail <span
+                                    class="contact-form__required">*</span></label>
+                        <input type="email" placeholder="Twój adres email" id="email" class="contact-form__input"
+                               required>
+                    </div>
 
-                <div class="contact-form__group">
-                    <label class="contact-form__label" for="city">Miasto <span
-                                class="contact-form__required">*</span></label>
-                    <select name="city" id="city" class="contact-form__select">
-                        <option value="">Wybierz miasto</option>
-                        <option value="">Warszawa</option>
-                        <option value="">wrocław</option>
-                        <option value="">poznań</option>
-                        <option value="">kraków</option>
-                        <option value="">łódź</option>
-                    </select>
+                    <div class="contact-form__group">
+                        <label class="contact-form__label" for="city">Miasto <span
+                                    class="contact-form__required">*</span></label>
+                        <select name="city" id="city" class="contact-form__select">
+                            <option value="">Wybierz miasto</option>
+                            <option value="">Warszawa</option>
+                            <option value="">wrocław</option>
+                            <option value="">poznań</option>
+                            <option value="">kraków</option>
+                            <option value="">łódź</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
                 </div>
-
                 <div class="contact-form__group">
                     <label class="contact-form__label" for="message">Wiadomość</label>
                     <textarea name="message" class="contact-form__textarea" id="message" cols="30" rows="10"></textarea>

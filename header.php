@@ -59,22 +59,13 @@
                     ?>
                 </nav><!-- #site-navigation -->
             </div>
-            <?php if(!is_front_page()) : ?>
-                <div class="header__content header__content--detailed">
-                    <h1 class="header__page-title"> <?php echo the_title(); ?></h1>
-                    <?php if(is_page('Galeria')): ?>
-                        <ul class="gallery-categories">
-                            <li><a href="" class="active">Nasz zespół</a></li>
-                            <li><a href="">Technologia</a></li>
-                            <li><a href="">Temat</a></li>
-                        </ul>
-                    <?php endif; ?>
-
-                    <?php if(is_page('O nas')): ?>
-                        <div class="header__description">Nie tylko sprawiamy, że Twoje ciało wygląda lepiej i poprawiamy Twoje samopoczucie, ale i wywieramy na Twój organizm działanie lecznicze, które zaczyna się od już na poziomie komórek i tkanek.</div>
-                    <?php endif; ?>
-                </div>
-            <?php endif; ?>
+            <div class="mega-menu__wrapper">
+                <section class="mega-menu">
+                    <div class="mega-menu__content">
+                        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Mega menu')) : endif; ?>
+                    </div>
+                </section>
+            </div>
         </header><!-- #masthead -->
         <div id="slider"></div>
     </section>
@@ -96,18 +87,22 @@
                     <div class="contact-form__group">
                         <label class="contact-form__label" for="name">Imię i nazwisko <span
                                     class="contact-form__required">*</span></label>
-                        <input type="text" placeholder="Podaj swoje imię i nazwisko" id="name" class="contact-form__input"
+                        <input type="text" placeholder="Podaj swoje imię i nazwisko" id="name"
+                               class="contact-form__input"
                                required>
                     </div>
                     <div class="contact-form__group">
                         <label class="contact-form__label" for="tel">Telefon <span
                                     class="contact-form__required">*</span></label>
-                        <input type="tel" placeholder="Twój numer telefonu" id="tel" class="contact-form__input" required>
+                        <input type="tel" placeholder="Twój numer telefonu" id="tel" class="contact-form__input"
+                               required>
                     </div>
 
                     <div class="contact-form__group">
-                        <label class="contact-form__label" for="email">E-mail <span class="contact-form__required">*</span></label>
-                        <input type="email" placeholder="Twój adres email" id="email" class="contact-form__input" required>
+                        <label class="contact-form__label" for="email">E-mail <span
+                                    class="contact-form__required">*</span></label>
+                        <input type="email" placeholder="Twój adres email" id="email" class="contact-form__input"
+                               required>
                     </div>
 
                     <div class="contact-form__group">
@@ -125,14 +120,17 @@
 
                     <div class="contact-form__group">
                         <label class="contact-form__label" for="message">Wiadomość</label>
-                        <textarea name="message" class="contact-form__textarea" id="message" cols="30" rows="10"></textarea>
+                        <textarea name="message" class="contact-form__textarea" id="message" cols="30"
+                                  rows="10"></textarea>
                     </div>
 
                     <div class="contact-form__privacy">
                         <input type="checkbox" id="">
                         <label for="">Zgadzam się na przetwarzanie moich danych osobowych w związku z Rozporządzeniem
-                            Parlamentu Europejskiego i Rady UE w sprawie ochrony osób fizycznych w związku z przetwarzaniem
-                            danych osobowych i w sprawie swobodnego przepływu takich danych (RODO) z dnia 27.04.2016 r. oraz
+                            Parlamentu Europejskiego i Rady UE w sprawie ochrony osób fizycznych w związku z
+                            przetwarzaniem
+                            danych osobowych i w sprawie swobodnego przepływu takich danych (RODO) z dnia 27.04.2016 r.
+                            oraz
                             rosnącej wartości informacji.</label>
                     </div>
 

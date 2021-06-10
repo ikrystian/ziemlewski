@@ -9,6 +9,17 @@
  */
 
 ?>
+<header class="page-top">
+    <div class="header__content header__content--detailed">
+        <h1 class="header__page-title"> <?php echo the_title(); ?></h1>
+        <div class="header__content header__content--detailed">
+            <div class="header__description">Nie tylko sprawiamy, że Twoje ciało wygląda lepiej i poprawiamy
+                Twoje samopoczucie, ale i wywieramy na Twój organizm działanie lecznicze, które zaczyna się
+                od już na poziomie komórek i tkanek.
+            </div>
+        </div>
+    </div>
+</header>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <?php
 
@@ -25,7 +36,7 @@
         <section class="dr-section section">
             <div class="section__container dr-section__container">
                 <div class="dr-section__image-wrapper section__image-wrapper--minus-top">
-                    <img src="http://klinika.local/wp-content/themes/klinika/images/dr-section-thumbnail.png"
+                    <img src="http://localhost/klinika/wp-content/themes/klinika/images/dr-section-thumbnail.png"
                          loading="lazy" alt="first section alternative text">
                 </div>
                 <div class="dr-section__content">
@@ -103,6 +114,7 @@
             <div class="section__container">
                 <p class="testimonials__description">Opinie osób, które trafiły w ręce dr. Ziemlewskiego, są
                     najdobitniejszym dowodem jego kunsztu:</p>
+                <?php echo do_shortcode('[sp_testimonial id="80"]'); ?>
             </div>
         </section>
 
