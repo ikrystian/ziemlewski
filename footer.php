@@ -31,6 +31,16 @@
 </footer><!-- #colophon -->
 </div><!-- #page -->
 
+<aside class="cookie-bar">
+    <div class="cookie-bar__content">
+        <p>Nasza strona korzysta z plików cookie i innych podobnych technologii, zaś odwiedzanie naszych stron oznacza zgodę na ich wykorzystanie przez nas na zasadach określonych w <a href="#">polityce prywatności</a>.</p>
+        <div class="cookie-bar__buttons">
+            <button id="acceptcookie" class="button button--primary">Akceptuję</button>
+            <button class="button button--reject">Odrzucam</button>
+        </div>
+    </div>
+</aside>
+
 <?php wp_footer(); ?>
 <link rel="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />

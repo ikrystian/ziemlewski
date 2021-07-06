@@ -9,7 +9,7 @@
  */
 
 ?>
-<header class="page-top">
+<header class="page-top" >
     <div class="header__content header__content--detailed">
         <h1 class="header__page-title"> <?php echo the_title(); ?></h1>
         <div class="header__content header__content--detailed">
@@ -23,12 +23,12 @@
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <section class="dr-section section"  data-aos="fade-in">
-            <div class="section__container dr-section__container">
+            <div class="section__container dr-section__container" data-aos="fade-right">
                 <div class="dr-section__image-wrapper section__image-wrapper--minus-top">
                     <img src="http://localhost/klinika/wp-content/themes/klinika/images/dr-section-thumbnail.png"
                          loading="lazy" alt="first section alternative text">
                 </div>
-                <div class="dr-section__content">
+                <div class="dr-section__content" data-aos="fade-left">
                     <h2>Dr Krzysztof Ziemlewski</h2>
                     <p>lekarz medycyny estetycznej, związany z tą dziedziną od 2001 r. Absolwent Wydziału Lekarskiego
                         Wojskowej Akademii Medycznej w Łodzi oraz Podyplomowej Szkoły Medycyny Estetycznej w
@@ -51,7 +51,7 @@
         </section>
 
         <section class="section section--white"  data-aos="fade-in">
-            <div class="section__container">
+            <div class="section__container" data-aos="fade-bottom">
                 <div class="text-center">
                     <p>Charyzma doktora i jego umiejętności sprawiają, że Kliniki Ziemlewski cieszą się ogromnym
                         zaufaniem
@@ -64,10 +64,10 @@
 
         <section class="section"  data-aos="fade-in">
             <div class="section__container section__container--flex">
-                <div class="section__image-wrapper">
+                <div class="section__image-wrapper" data-aos="fade-right">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about-image-1.png" alt="">
                 </div>
-                <div class="section__content">
+                <div class="section__content" data-aos="fade-left">
                     <h2 class="section__title">Misja/Wizja</h2>
                     <p>Kliniki Ziemlewski powstały z pasji jednego człowieka – dr. Krzysztofa Ziemlewskiego, pioniera
                         medycyny estetycznej w Polsce. Jego ogromne doświadczenie, profesjonalizm oraz fascynacja ideą
@@ -84,10 +84,10 @@
 
         <section class="section"  data-aos="fade-in">
             <div class="section__container section__container--flex section__container--reverse">
-                <div class="section__image-wrapper">
+                <div class="section__image-wrapper"  data-aos="fade-left">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about-image-2.png" alt="">
                 </div>
-                <div class="section__content">
+                <div class="section__content"  data-aos="fade-right">
                     <p>Celem dr. Krzysztofa Ziemlewskiego jest nieustanny rozwój i wyznaczanie nowej jakości w medycynie
                         estetycznej. W swoich gabinetach stosuje innowacyjne, autorskie techniki, najnowocześniejsze
                         technologie i zabiegi premium o najwyższej skuteczności. Pacjenci mogą więc korzystać z bogatej,
@@ -108,11 +108,11 @@
         </section>
 
         <section class="section"  data-aos="fade-in">
-            <div class="section__container section__container--flex section__container--reverse">
-                <div class="section__image-wrapper">
+            <div class="section__container section__container--flex section__container--reverse" >
+                <div class="section__image-wrapper"  data-aos="fade-bottom">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about-image-3.png" alt="">
                 </div>
-                <div class="section__content">
+                <div class="section__content"  data-aos="fade-top">
                     <h2 class="section__title">Filozofia Boskiej Proporcji</h2>
                     <p>Symetria otacza nas codziennie: stanowi element natury, sztuki czy ludzkiego organizmu. Już w
                         starożytności dostrzeżono, że to, co proporcjonalne i harmonijne, cieszy ludzkie oko bardziej
@@ -148,10 +148,10 @@
         <section class="section section--white"  data-aos="fade-in">
             <h2 class="section__title section__title--center">Klinika</h2>
             <div class="section__container section__container--flex">
-                <div class="section__image-wrapper">
+                <div class="section__image-wrapper"  data-aos="fade-left">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/about-image-4.png" alt="">
                 </div>
-                <div class="section__content">
+                <div class="section__content"  data-aos="fade-right">
                     <h3>Karolina Pazera</h3>
                     <h4>lekarz medycyny estetycznej</h4>
                     <p>Ukończyła Wydział Lekarski Uniwersytetu Medycznego w Warszawie oraz studia podyplomowe na
@@ -194,15 +194,14 @@
             </div>
         </section>
 
-        <section class="section section--primary cta"  data-aos="fade-in">
+        <section class="section section--primary cta" data-aos="fade-in">
             <div class="section__container">
-                <div>
+                <div data-aos="fade-left">
                     <h2>Umów się na wizytę w Twoim mieście</h2>
-                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Czeka na Ciebie nasza centralna recepcja</p>
                 </div>
-                <div>
-                    <a href="" class="button button--accent">Umów konsultacje</a>
+                <div data-aos="fade-right">
+                    <a href="#" class="button button--accent open-consultation-modal">Umów konsultacje</a>
                 </div>
             </div>
         </section>
-

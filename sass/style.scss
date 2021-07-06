@@ -86,6 +86,7 @@ a {
   text-align: center;
   letter-spacing: 1px;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -117,6 +118,20 @@ a {
     &:focus {
       color: #fff;
       background-color: $primary-color;
+    }
+  }
+
+  &--reject {
+    color: #9F9F9F;
+    background-color: transparent;
+    border-color: #9F9F9F;
+    font-weight: 500;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: transparent;
+      border-color: #fff;
     }
   }
 }
@@ -177,6 +192,11 @@ body {
   font-size: 1.6rem;
   line-height: 2.7rem;
   font-family: 'Montserrat', sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+  &.locked {
+    overflow: hidden;
+  }
   //font-family: 'Poppins', sans-serif;
 }
 
@@ -340,13 +360,23 @@ img {
       @extend .button;
       padding: 1rem 2rem;
       background-color: transparent;
-      border-color: #fff;
-      color: #fff;
+      color: #333;
+      border-color: #333;
+
+      @include res(tab) {
+        border-color: #fff;
+        color: #fff;
+      }
       transition: border-color 0.2s ease;
 
       &:hover,
       &:focus {
-        color: #fff;
+        color: #333;
+
+        @include res(tab) {
+          color: #fff;
+        }
+
         border-color: $primary-color;
         background-color: transparent;
       }
@@ -364,6 +394,11 @@ img {
     font-size: 1.9rem;
     line-height: 2.8rem;
     font-weight: 400;
+    margin-bottom: 10rem;
+
+    @include res(desktop) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -377,6 +412,26 @@ img {
   right: -31px;
   padding: 1rem;
   display: none;
+
+  @media screen and (max-width: 768px) {
+    max-height: calc(100vh - 95px);
+    overflow: auto;
+  }
+
+  .close-sub {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    font-size: 1.6rem;
+    border: 0;
+    background-color: #fff;
+    text-transform: uppercase;
+
+    @include res(tab) {
+      display: none;
+    }
+  }
 
   &::before {
     content: '';
@@ -437,40 +492,42 @@ img {
     }
   }
 
-  ul {
-    padding: 0;
-
-    li {
-      display: flex;
-      align-items: center;
-      padding-left: 0;
-      margin-bottom: 1rem;
-    }
-
-    a {
-      color: #000;
-
-      &:hover,
-      &:focus {
-        text-decoration: underline;
-      }
-    }
-
-    span {
-      text-decoration: none;
-      margin-left: 0.5rem;
-      background-color: #000;
-      color: #fff;
-      font-size: 0.9rem;
-      display: inline-flex;
-      height: 11px;
-      padding-left: 0.4rem;
-      padding-right: 0.4rem;
-      line-height: 11px;
-      white-space: nowrap;
-      text-transform: uppercase;
-    }
-  }
+  //ul {
+  //  padding: 0;
+  //  width: 100%;
+  //
+  //  li {
+  //    display: flex;
+  //    flex-direction: column;
+  //    align-items: center;
+  //    padding-left: 0;
+  //    margin-bottom: 1rem;
+  //  }
+  //
+  //  a {
+  //    color: #000;
+  //
+  //    &:hover,
+  //    &:focus {
+  //      text-decoration: underline;
+  //    }
+  //  }
+  //
+  //  span {
+  //    text-decoration: none;
+  //    margin-left: 0.5rem;
+  //    background-color: #000;
+  //    color: #fff;
+  //    font-size: 0.9rem;
+  //    display: inline-flex;
+  //    height: 11px;
+  //    padding-left: 0.4rem;
+  //    padding-right: 0.4rem;
+  //    line-height: 11px;
+  //    white-space: nowrap;
+  //    text-transform: uppercase;
+  //  }
+  //}
 }
 
 .main-navigation {
@@ -480,6 +537,20 @@ img {
 
     @media screen and (min-width: 992px) {
       display: none;
+    }
+
+    img {
+      display: none;
+    }
+
+    &.active {
+      img {
+        display: inline-block;
+      }
+
+      svg {
+        display: none;
+      }
     }
   }
 
@@ -932,14 +1003,27 @@ img {
 .spec-list {
   display: flex;
 
+  &__image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+  }
+
   &__item {
     padding-left: 0;
-    min-width: 267px;
-    width: 267px;
+    min-width: 300px;
+    width: 300px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    justify-content: flex-end;
+    padding-top: 100px;
 
     @include res(tab) {
+      padding-top: 300px;
       min-width: 396px;
       width: 396px;
     }
@@ -963,8 +1047,9 @@ img {
     background-color: #f3f3f3;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
-    margin-top: -9rem;
     padding: 1.8rem;
+    z-index: 2;
+    position: relative;
 
     &--static {
       position: absolute;
@@ -1427,6 +1512,8 @@ img {
     width: 100%;
     max-width: 778px;
     height: 100%;
+    max-height: 100%;
+    overflow: auto;
   }
 }
 
@@ -1465,6 +1552,9 @@ img {
   &__select,
   &__textarea {
     outline: none;
+    max-width: 100%;
+    width: 100%;
+    cursor: pointer;
     font-family: Montserrat, sans-serif;
     color: #333;
     font-size: 1.6rem;
@@ -1830,17 +1920,17 @@ img {
       padding-left: 3.5rem;
       margin-bottom: 1rem;
     }
+  }
 
-    &.plus {
-      li {
-        background: url('./images/plus-circle.png') left center no-repeat;
-      }
+  .plus ul {
+    li {
+      background: url('./images/plus-circle.png') left center no-repeat;
     }
+  }
 
-    &.minus {
-      li {
-        background: url('./images/minus-circle.png') left center no-repeat;
-      }
+  .minus ul {
+    li {
+      background: url('./images/minus-circle.png') left center no-repeat;
     }
   }
 }
@@ -1864,6 +1954,7 @@ img {
   &__content {
     @include res(tab) {
       padding-top: 5rem;
+      padding-left: 2rem;
     }
 
     h3 {
@@ -1909,6 +2000,19 @@ img {
   &__description {
     @include res(tab) {
       max-width: 691px;
+    }
+
+    ul {
+      padding-left: 2rem;
+      list-style-type: circle;
+
+      @include res(tab) {
+        padding-left: 2rem;
+      }
+
+      li {
+        padding-left: 0;
+      }
     }
   }
 
@@ -1996,6 +2100,15 @@ img {
   background-color: #fff !important;
 }
 
+.sp-testimonial-free {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.tfree-testimonial-title {
+  opacity: 0.7;
+}
+
 .sp-testimonial-free-section {
   .slick-dots {
     display: flex;
@@ -2008,6 +2121,7 @@ img {
       background-color: rgba(255, 255, 255, 0.2) !important;
       position: relative;
       transition: background-color 0.2s ease-in-out;
+      cursor: pointer;
 
       &.slick-active {
         background-color: #fff !important;
@@ -2055,6 +2169,7 @@ img {
       padding-left: 0;
 
       button {
+        cursor: pointer;
         width: 50px;
         height: 8px;
         border: 0;
@@ -2163,4 +2278,113 @@ img {
     display: block;
     margin-bottom: 1rem;
   }
+}
+
+.wpcf7-not-valid-tip {
+  text-align: right;
+  font-size: 12px;
+  margin-bottom: -3rem;
+}
+
+.wpcf7-list-item {
+  margin-left: 0;
+}
+
+.wpcf7 form .wpcf7-response-output {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.wpcf7-submit {
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.ajax-loader {
+  display: none !important;
+}
+
+.training__form-container {
+  @include res(desktop) {
+    width: 60%;
+  }
+}
+
+.training-form {
+  .contact-page__column > div:first-child {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.full-offer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include res(tab) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  li {
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+
+    @include res(tab) {
+      width: 50%;
+    }
+
+    @include res(desktop) {
+      width: 25%;
+      padding: 0 1rem;
+    }
+
+    a {
+      max-width: 269px;
+      color: #333;
+    }
+  }
+}
+
+.cookie-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 1rem;
+  background-color: #1E1E1E;
+  color: #fff;
+  display: grid;
+  place-items: center;
+
+  @include res(tab) {
+    padding: 1rem;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1310px;
+    padding-left: 7.5rem;
+    background: url('./images/cookie.png') left center no-repeat;
+
+    a {
+      color: #fff;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    margin-left: 2.5rem;
+
+    button {
+      margin-left: 2rem;
+    }
+  }
+
 }

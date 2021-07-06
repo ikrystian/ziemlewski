@@ -66,23 +66,7 @@
                             <p>Całodniowe szkolenie towarzyszące w pracy gabinetowej dr. Krzysztofa Ziemlewskiego</p>
                             <p><strong>Cena 2 500zł</strong></p>
                             <p>
-                                <a href="#" class="button button--inline">Zapisz się na szkolenie</a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="faq__item">
-                        <div class="faq__header faq__header--active">
-                            <h5 class="faq__title">Podstawowe zasady zastosowania Kwasu hialuronowego oraz toksyny botulinowej</h5>
-                            <div>
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/arrow-faq.png" alt="">
-                            </div>
-                        </div>
-                        <div class="faq__content">
-                            <p>Całodniowe szkolenie towarzyszące w pracy gabinetowej dr. Krzysztofa Ziemlewskiego</p>
-                            <p><strong>Cena 2 500zł</strong></p>
-                            <p>
-                                <a href="#" class="button button--inline">Zapisz się na szkolenie</a>
+                                <a href="" onclick="return false;" class="button button--inline">Dostępne już niebawem !</a>
                             </p>
                         </div>
                     </div>
@@ -91,64 +75,21 @@
         </section>
 
         <section class="section section--white"  data-aos="fade-in">
-            <div class="section__container">
+            <div class="section__container training__form-container">
+
                 <h2 class="section__title">Nie dla Ciebie? Nie szkodzi, zostaw nam swoje dane, poinforujemy Cię o nich:</h2>
-                <form action="" class="contact-form contact-page__form">
-                    <div class="contact-page__column">
-                        <div class="contact-form__group">
-                            <label class="contact-form__label" for="name">Imię i nazwisko <span
-                                        class="contact-form__required">*</span></label>
-                            <input type="text" placeholder="Podaj swoje imię i nazwisko" id="name"
-                                   class="contact-form__input"
-                                   required>
-                        </div>
-
-                        <div class="contact-form__group">
-                            <label class="contact-form__label" for="tel">Telefon <span
-                                        class="contact-form__required">*</span></label>
-                            <input type="tel" placeholder="Twój numer telefonu" id="tel" class="contact-form__input"
-                                   required>
-                        </div>
-                    </div>
-                    <div class="contact-page__column">
-                        <div class="contact-form__group">
-                            <label class="contact-form__label" for="email">E-mail <span
-                                        class="contact-form__required">*</span></label>
-                            <input type="email" placeholder="Twój adres email" id="email" class="contact-form__input"
-                                   required>
-                        </div>
-
-                    </div>
-                    <p>Interesują mnie informacje o:</p>
-                    <div class="contact-form__privacy">
-                        <input type="checkbox" id="">
-                        <label for="">Szkoleniach (jestem lekarzem / kosmetologiem)</label>
-                    </div>
-                    <div class="contact-form__privacy">
-                        <input type="checkbox" id="">
-                        <label for="">Zabiegach medycyny estetycznej (chcę zostać modelką/modelem)</label>
-                    </div>
-
-                    <div class="contact-form__privacy">
-                        <input type="checkbox" id="">
-                        <label for="">Zgadzam się na przetwarzanie moich danych osobowych w związku z Rozporządzeniem Parlamentu Europejskiego i Rady UE w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych (RODO) z dnia 27.04.2016 r. oraz rosnącej wartości informacji przez www.klinikiziemlewski.pl Kliniki Ziemlewski. .</label>
-                    </div>
-
-                    <footer class="contact-page__form-footer">
-                        <button class="button button--primary">Wyślij</button>
-                    </footer>
-                </form>
+                <?php echo do_shortcode('[contact-form-7 id="159" title="Trainings form" html_class="contact-form contact-page__form training-form"]'); ?>
             </div>
         </section>
 
-        <section class="section section--primary cta"  data-aos="fade-in">
+        <section class="section section--primary cta" data-aos="fade-in">
             <div class="section__container">
                 <div>
                     <h2>Umów się na wizytę w Twoim mieście</h2>
-                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Czeka na Ciebie nasza centralna recepcja</p>
                 </div>
                 <div>
-                    <a href="" class="button button--accent">Umów konsultacje</a>
+                    <a href="#" class="button button--accent open-consultation-modal">Umów konsultacje</a>
                 </div>
             </div>
         </section>

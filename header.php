@@ -17,10 +17,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <meta name="description" content="BPCoders">
+    <style>
+        .loader {
+            position: fixed;
+            top:  0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #000;
+            z-index: 2000;
+            display:  grid;
+            place-content: center;
+        }
+    </style>
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<div class="loader"> <?php the_custom_logo(); ?></div>
 <div id="page" class="site">
     <a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'klinika'); ?></a>
 
@@ -32,12 +46,12 @@
                 </div><!-- .site-branding -->
 
                 <div class="header__contact-section">
-                    <a href="tel:+48000000000">
+                    <a href="tel:+48502263133">
                         <svg width="22" height="23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M15.584 1.834H6.417A1.834 1.834 0 004.584 3.67v14.675c0 1.013.82 1.835 1.833 1.835h9.166a1.834 1.834 0 001.834-1.835V3.67c0-1.013-.821-1.835-1.834-1.835zM11 16.51h.01"
                                   stroke="#9F9F9F" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
-                        <span>+48 000 000 000</span>
+                        <span>+48 502 263 133</span>
                     </a>
                 </div>
 
@@ -48,6 +62,7 @@
                             <path d="M5.922 20h30M5.922 10h30M5.922 30h30" stroke="#fff" stroke-width="2"
                                   stroke-linejoin="round"/>
                         </svg>
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/burger-close.png" alt="">
                     </button>
                     <div class="mobile-menu">
                         <?php
@@ -72,8 +87,15 @@
             </div>
             <div class="mega-menu__wrapper">
                 <section class="mega-menu">
+                    <button class="close-sub">Wstecz</button>
                     <div class="mega-menu__content">
-                        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Mega menu')) : endif; ?>
+                        <?php // if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Mega menu')) : endif; ?>
+                        <?php $loop = new WP_Query( array( 'post_type' => 'treatment', 'posts_per_page' => -1 ) ); ?>
+                        <ul class="full-offer">
+                        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                            <?php the_title( '<li><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></li>' ); ?>
+                        <?php endwhile; ?>
+                        </ul>
                     </div>
                 </section>
             </div>
@@ -93,67 +115,11 @@
             <h2 class="contact-overlay__title">Umów się na konsultacje:</h2>
 
             <div class="contact-overlay__row">
-
-                <form action="" class="contact-form">
-                    <div class="contact-form__group">
-                        <label class="contact-form__label" for="name">Imię i nazwisko <span
-                                    class="contact-form__required">*</span></label>
-                        <input type="text" placeholder="Podaj swoje imię i nazwisko" id="name"
-                               class="contact-form__input"
-                               required>
-                    </div>
-                    <div class="contact-form__group">
-                        <label class="contact-form__label" for="tel">Telefon <span
-                                    class="contact-form__required">*</span></label>
-                        <input type="tel" placeholder="Twój numer telefonu" id="tel" class="contact-form__input"
-                               required>
-                    </div>
-
-                    <div class="contact-form__group">
-                        <label class="contact-form__label" for="email">E-mail <span
-                                    class="contact-form__required">*</span></label>
-                        <input type="email" placeholder="Twój adres email" id="email" class="contact-form__input"
-                               required>
-                    </div>
-
-                    <div class="contact-form__group">
-                        <label class="contact-form__label" for="city">Miasto <span
-                                    class="contact-form__required">*</span></label>
-                        <select name="city" id="city" class="contact-form__select">
-                            <option value="">Wybierz miasto</option>
-                            <option value="">Warszawa</option>
-                            <option value="">wrocław</option>
-                            <option value="">poznań</option>
-                            <option value="">kraków</option>
-                            <option value="">łódź</option>
-                        </select>
-                    </div>
-
-                    <div class="contact-form__group">
-                        <label class="contact-form__label" for="message">Wiadomość</label>
-                        <textarea name="message" class="contact-form__textarea" id="message" cols="30"
-                                  rows="10"></textarea>
-                    </div>
-
-                    <div class="contact-form__privacy">
-                        <input type="checkbox" id="">
-                        <label for="">Zgadzam się na przetwarzanie moich danych osobowych w związku z Rozporządzeniem
-                            Parlamentu Europejskiego i Rady UE w sprawie ochrony osób fizycznych w związku z
-                            przetwarzaniem
-                            danych osobowych i w sprawie swobodnego przepływu takich danych (RODO) z dnia 27.04.2016 r.
-                            oraz
-                            rosnącej wartości informacji.</label>
-                    </div>
-
-                    <footer class="form__footer">
-                        <button class="button button--primary">Wyślij</button>
-                    </footer>
-                </form>
+                <?php echo do_shortcode('[contact-form-7 id="147" title="Sidebar contact form" html_class="contact-form"]'); ?>
                 <div class="contact-overlay__info">
                     <h3>Centralna recepcja</h3>
-                    <p>Centralna recepcja</p>
-                    <p><a href="">48 000 000 000</a></p>
-                    <p><a href="mailto:centrala@klinikiziemlewski.pl">centrala@klinikiziemlewski.pl</a></p>
+                    <p><a href="tel:+48502263133">+48 502 263 133</a></p>
+                    <p><a href="mailto:wroclaw@klinikiziemlewski.pl">wroclaw@klinikiziemlewski.pl</a></p>
                     <p>pn - pt: 10:00 - 19:00</p>
                     <p>sb - nd: Nieczynne</p>
                 </div>

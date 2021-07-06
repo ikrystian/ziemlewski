@@ -203,3 +203,33 @@ function smallenvelop_widgets_init() {
 add_action( 'widgets_init', 'smallenvelop_widgets_init' );
 
 add_filter('show_admin_bar', '__return_false');
+
+
+function create_structure()
+{
+
+    register_post_type('treatment', array(
+            'labels' => array(
+                'name' => __('Zabiegi'),
+                'singular_name' => __('Zabieg')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'oferta'),
+            'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments', 'custom-fields', 'page-attributes'),
+            'prevent_duplicates' => true
+        )
+    );
+
+
+    flush_rewrite_rules(false);
+}
+
+add_action('init', 'create_structure');
+
+
+$args= array(
+    // other settings
+    'rewrite' => array( 'slug' => 'oferta' ),
+);
+register_post_type( 'treatment', $args);
